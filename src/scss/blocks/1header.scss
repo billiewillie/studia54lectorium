@@ -1,0 +1,44 @@
+.header {
+  color: white;
+  width: 100%;
+  margin-bottom: -20px;
+
+  @media (min-width: $lg) {
+    padding-bottom: 34px;
+  }
+
+  & .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 40px;
+    padding-bottom: 20px;
+    width: calc(100% - 30px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+    @media (min-width: $lg) {
+      padding: 0 60px 34px;
+      flex-direction: row;
+      row-gap: initial;
+    }
+  }
+
+  &-content {
+    display: flex;
+    column-gap: 60px;
+    align-items: center;
+  }
+}
+
+.logo {
+  width: 113px;
+
+  @media (min-width: $md) {
+    width: 150px;
+  }
+
+  & img {
+    display: block;
+  }
+}

@@ -1,0 +1,21 @@
+include ../mixins/title
+
+.contacts
+  .container
+    .contacts__content
+      .contacts__content-container
+        h2.title
+          | Если у вас остались вопросы,
+          br
+          | позвоните или напишите нам
+        .contacts__list
+          a.contacts__item(href="tel:+496170961709")
+            span.contacts__icon
+              svg.contacts__phone
+                use(xlink:href="./img/sprite.svg#phone")
+            span.contacts__text.phone +7 (999) 999-99-99
+          a.contacts__item(href="mailto:abc@example.com")
+            span.contacts__icon
+              svg.contacts__mail
+                use(xlink:href="./img/sprite.svg#mail")
+            span.contacts__text.email mail@mail.com

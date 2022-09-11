@@ -1,0 +1,142 @@
+.shedule {
+
+	& .container {
+		position       : relative;
+		flex-direction : column;
+		row-gap        : 40px;
+		padding        : 0;
+
+		@media (min-width : $md) {
+			padding : 0 15px;
+
+		}
+	}
+
+	& .title {
+		padding : 0 15px;
+	}
+
+	&__list {
+		display        : flex;
+		row-gap        : 20px;
+		flex-direction : column;
+	}
+
+	&__item {
+		padding          : 30px 15px;
+		background-color : var(--grey);
+		display          : flex;
+		flex-direction   : column;
+		row-gap          : 20px;
+
+		@media (min-width : $lg) {
+			padding : 60px;
+
+		}
+
+		&.active {
+			& .shedule__header-title {
+				color : var(--gold);
+			}
+		}
+	}
+
+	& .shedule__item-header {
+		display        : flex;
+		flex-direction : column;
+		position       : relative;
+		row-gap        : 20px;
+		padding-bottom : 20px;
+		border-bottom  : 1px solid var(--gold);
+		align-items    : flex-start;
+
+		@media (min-width : $md) {
+			flex            : auto;
+			flex-direction  : row;
+			column-gap      : 60px;
+			justify-content : space-between;
+		}
+	}
+
+	& .shedule__header-title {
+		padding   : 0;
+		font-size : 14px;
+		@media (min-width : $md) {
+			font-size : 20px;
+			flex      : auto;
+		}
+	}
+
+	.shedule__header-item {
+		display     : flex;
+		column-gap  : 6px;
+		align-items : center;
+	}
+
+	& .shedule__header-dates {
+		display    : flex;
+		column-gap : 20px;
+	}
+
+	& .inner__list {
+		display        : flex;
+		flex-direction : column;
+		row-gap        : 10px;
+		padding-left   : 15px;
+
+		@media (min-width : $lg) {
+			row-gap : 20px;
+		}
+	}
+
+	& .inner__list-item {
+		font-size : 14px;
+		position  : relative;
+
+		&::before {
+			position    : absolute;
+			display     : block;
+			content     : "\2022";
+			color       : var(--gold);
+			height      : 20px;
+			font-size   : 20px;
+			line-height : 20px;
+			left        : -15px;
+			top         : 0;
+
+			@media (min-width : $md) {
+				top       : 2px;
+				font-size : 24px;
+			}
+		}
+
+		@media (min-width : $md) {
+			font-size : 18px;
+		}
+	}
+
+	&__date-icon,
+	&__time-icon {
+		width  : 24px;
+		height : 24px;
+	}
+
+	&__toggle {
+		position : absolute;
+		right    : 0;
+		top      : 0;
+		width    : 18px;
+		height   : 8px;
+
+		@media (min-width : $md) {
+			position : relative;
+			display  : flex;
+			top      : 6px;
+		}
+	}
+
+	&__toggle-icon {
+		width  : 18px;
+		height : 8px;
+	}
+}

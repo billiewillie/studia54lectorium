@@ -1,0 +1,70 @@
+.first-screen {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+
+  & .container {
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 10px;
+
+    @media (min-width: $md) {
+      row-gap: 30px;
+    }
+  }
+
+  .title {
+    font-size: 30px;
+    max-width: 690px;
+
+    @media (min-width: $md) {
+      font-size: 60px;
+    }
+  }
+
+  .subtitle {
+    max-width: 600px;
+    font-size: 18px;
+
+    @media (min-width: $md) {
+      font-size: 28px;
+    }
+  }
+
+  & .first__pic {
+    position: relative;
+    margin-top: 8px;
+
+    @media (min-width: $lg) {
+      position: absolute;
+      right: -115px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 853px;
+      height: 390px;
+      z-index: -1;
+    }
+
+    & img {
+      transform: rotate(-4px);
+    }
+
+    &::before {
+      display: block;
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      right: 18%;
+      width: 45vw;
+      height: 45vw;
+      background: radial-gradient(rgba(203, 163, 124, 0.35) 0%, rgba(203, 163, 124, 0) 100%);
+      filter: blur(25px);
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
+}

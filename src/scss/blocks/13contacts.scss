@@ -1,0 +1,98 @@
+.contacts {
+	margin-bottom : -60px;
+
+	@media (min-width : $md) {
+		margin-bottom : -120px;
+	}
+
+	& .container {
+		@media (min-width : $lg) {
+			background-color : var(--grey);
+		}
+	}
+
+	&__content {
+		padding          : 40px 15px 0;
+		max-width        : 1047px;
+		width            : 100%;
+		margin           : auto;
+		background-color : var(--grey);
+
+		@media (min-width : $lg) {
+			display          : flex;
+			justify-content  : center;
+			border-bottom    : 1px solid var(--gold);
+			background-color : transparent;
+		}
+
+		&-container {
+			row-gap         : 30px;
+			display         : flex;
+			border-bottom   : 1px solid var(--gold);
+			flex-direction  : column;
+			padding-bottom  : 30px;
+			justify-content : center;
+
+			@media (min-width : $lg) {
+				border-bottom : none;
+				align-items   : center;
+				max-width     : 712px;
+			}
+		}
+	}
+
+	&__list {
+		display        : flex;
+		flex-direction : column;
+		gap            : 10px;
+
+		@media (min-width : $lg) {
+			gap            : 60px;
+			flex-direction : row;
+		}
+	}
+
+	&__item {
+		display     : flex;
+		column-gap  : 20px;
+		align-items : center;
+	}
+
+	&__icon {
+		width                 : 36px;
+		height                : 36px;
+		background-color      : #211D19;
+		-webkit-border-radius : 50%;
+		-moz-border-radius    : 50%;
+		border-radius         : 50%;
+		display               : flex;
+		justify-content       : center;
+		align-items           : center;
+
+		@media (min-width : $lg) {
+			width                 : 46px;
+			height                : 46px;
+		}
+	}
+
+	&__phone {
+		width  : 13px;
+		height : 13px;
+
+		@media (min-width : $lg) {
+			width                 : 16px;
+			height                : 16px;
+		}
+	}
+
+	&__mail {
+		width  : 13px;
+		height : 9px;
+
+		@media (min-width : $lg) {
+			width                 : 16px;
+			height                : 11px;
+		}
+	}
+
+}

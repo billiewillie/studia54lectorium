@@ -1,0 +1,117 @@
+.quote {
+  margin-top: 15px;
+  @media (min-width: $lg) {
+    margin-bottom: 190px;
+  }
+
+  & .container {
+    row-gap: 30px;
+    flex-direction: column;
+
+    @media (min-width: $lg) {
+      display: grid;
+      grid-template-columns: 413px 738px;
+      grid-template-rows: repeat(2, auto);
+      row-gap: 60px;
+      justify-content: space-between;
+    }
+  }
+
+  &__text {
+    & p {
+      font-size: 14px;
+      @media (min-width: $lg) {
+        font-size: 18px;
+      }
+    }
+
+    & a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+
+  &__photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $lg) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      position: relative;
+    }
+
+    & picture {
+      @media (min-width: $lg) {
+        height: 100%;
+      }
+    }
+
+    & img {
+      width: 77vw;
+
+      @media (min-width: $lg) {
+        width: inherit;
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media (min-width: $lg) {
+        position: absolute;
+        top: calc(100% + 30px);
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    &-name {
+      font-size: 24px;
+      margin-bottom: 6px;
+      margin-top: 14px;
+
+      @media (min-width: $lg) {
+        margin-bottom: 0px;
+        margin-top: 0;
+      }
+    }
+
+    &-about {
+      font-size: 14px;
+      max-width: 170px;
+      text-align: center;
+
+      @media (min-width: $lg) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+
+    @media (min-width: $lg) {
+      font-size: 38px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    @media (min-width: $lg) {
+      font-size: 18px;
+    }
+  }
+
+}

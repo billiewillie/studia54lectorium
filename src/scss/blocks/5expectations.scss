@@ -1,0 +1,76 @@
+.expectations {
+
+	& .container {
+		flex-direction : column;
+		row-gap        : 40px;
+
+		@media (min-width : $lg) {
+			row-gap : 60px;
+
+		}
+	}
+
+	&__list {
+		width    : 100%;
+		overflow : hidden;
+
+		& .swiper-wrapper {
+			@media (min-width : $lg) {
+				gap                   : 20px;
+				display               : grid;
+				grid-template-columns : repeat(3, 1fr);
+			}
+		}
+	}
+
+	&__item {
+		display        : flex;
+		flex-direction : column;
+		row-gap        : 16px;
+
+		@media (min-width : $lg) {
+			padding        : 30px 60px 30px 30px;
+			min-height     : 309px;
+			position       : relative;
+			flex-direction : column-reverse;
+			align-items    : flex-end;
+			background     : linear-gradient(180deg, rgba(0, 0, 0, 0) 36.89%, rgba(0, 0, 0, 0.8) 83.5%);
+		}
+	}
+
+	&__image {
+		@media (min-width : $lg) {
+			top      : 0;
+			left     : 0;
+			position : absolute;
+			z-index  : -1;
+		}
+	}
+
+	&__text {
+		position    : relative;
+		font-size   : 16px;
+		text-indent : 16px;
+		text-align  : left;
+
+		@media (min-width : $md) {
+			font-size : 18px;
+		}
+
+		&::before {
+			position    : absolute;
+			display     : block;
+			content     : '/';
+			left        : -15px;
+			top         : 0;
+			font-size   : 22px;
+			height      : 22px;
+			line-height : 1;
+			color       : var(--gold);
+
+			@media (min-width : $md) {
+				top : 2px;
+			}
+		}
+	}
+}

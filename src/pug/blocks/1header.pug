@@ -1,0 +1,13 @@
+include ../mixins/button
+
+header.header
+  .container
+    .logo
+      img(src="./img/logo.svg", alt="logo")
+    .header-content
+      ul.menu.md-visible
+        li.menu__item
+          a.menu__link(href="#catalog") программа
+        li.menu__item
+          a.menu__link(href="#contacts") о спикере
+      +button({classes: "button", href: "#form"}) Регистрация

@@ -53,3 +53,10 @@ const borderedObserver = new IntersectionObserver(
 document
   .querySelectorAll('.bordered')
   .forEach(item => borderedObserver.observe(item));
+
+const questions = Array.from(document.querySelectorAll('.qa__item-question'));
+questions.forEach(item => {
+  item.addEventListener('click', () => {
+    item.closest('.qa__item').classList.toggle('show');
+  });
+});

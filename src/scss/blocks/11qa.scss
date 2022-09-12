@@ -14,39 +14,123 @@
 		width          : 100%;
 		max-width      : 846px;
 		margin         : auto;
+		row-gap        : 10px;
 	}
 
 	&__item {
-		position       : relative;
-		padding        : 20px 15px;
-		display        : flex;
-		flex-direction : column;
-		row-gap        : 10px;
+		position         : relative;
+		overflow         : hidden;
+		padding          : 20px 10px 0;
+		display          : flex;
+		flex-direction   : column;
+		row-gap          : 10px;
+		background-color : rgba(23, 23, 23, 0);
+		transition       : background-color 0.5s ease 0.1s, padding 0.5s ease 0.2s;
 
 		&-question {
 			font-size    : 16px;
 			padding-left : 44px;
 			font-family  : $font_title;
+			transition   : color 0.5s ease;
+			cursor       : pointer;
+			position     : relative;
 			@media (min-width : $lg) {
-				font-size : 18px;
+				font-size : 20px;
+			}
+
+			&::before {
+				position              : absolute;
+				content               : '';
+				display               : block;
+				width                 : 16px;
+				height                : 2px;
+				left                  : 10px;
+				top                   : 11px;
+				-webkit-border-radius : 20px;
+				-moz-border-radius    : 20px;
+				border-radius         : 20px;
+				background-color      : var(--gold);
+
+				@media (min-width : $lg) {
+					top : 15px;
+				}
+			}
+
+			&::after {
+				position              : absolute;
+				content               : '';
+				display               : block;
+				width                 : 16px;
+				height                : 2px;
+				left                  : 10px;
+				top                   : 11px;
+				transform             : rotate(-90deg);
+				-webkit-border-radius : 20px;
+				-moz-border-radius    : 20px;
+				border-radius         : 20px;
+				background-color      : var(--gold);
+				transition            : transform 0.5s ease;
+
+				@media (min-width : $lg) {
+					top : 15px;
+				}
 			}
 		}
 
 		&-answer {
 			font-size    : 14px;
 			padding-left : 44px;
+			animation    : 0.5s ease forwards slideOut;
 
 			@media (min-width : $lg) {
-				font-size : 20px;
+				font-size : 18px;
 			}
 		}
 
 		&.show {
-			background-color : var(--grey);
+			background-color : rgba(23, 23, 23, 1);
 
 			& .qa__item-question {
 				color : var(--gold);
+
+				&::after {
+					transform : rotate(0deg);
+				}
+			}
+
+			& .qa__item-answer {
+				animation : 0.5s ease forwards slidein;
 			}
 		}
+	}
+}
+
+@keyframes slidein {
+	from {
+		max-height     : 0;
+		padding-bottom : 0;
+	}
+
+	to {
+		max-height     : 1000px;
+		padding-bottom : 20px;
+
+	}
+}
+
+@keyframes slideOut {
+	0% {
+		max-height     : 1000px;
+		padding-bottom : 20px;
+	}
+
+	50% {
+		max-height     : 200px;
+		padding-bottom : 20px;
+	}
+
+	100% {
+		max-height     : 0;
+		padding-bottom : 0;
 	}
 }

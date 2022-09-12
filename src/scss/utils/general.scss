@@ -62,6 +62,32 @@ body {
 	@media (min-width : $lg) {
 		font-size : 38px;
 	}
+
+	&.bordered {
+		position : relative;
+
+		&::after {
+			position         : absolute;
+			display          : block;
+			content          : '';
+			width            : 0;
+			height           : 1px;
+			left             : 0;
+			background-color : var(--gold);
+			top              : calc(100% + 20px);
+			transition       : width 0.3s ease 0.2s;
+
+			@media (min-width : $lg) {
+				top : calc(100% + 30px);
+			}
+		}
+
+		&.shown {
+			&::after {
+				width : 240px;
+			}
+		}
+	}
 }
 
 a {

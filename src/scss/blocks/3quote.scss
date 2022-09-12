@@ -18,6 +18,17 @@
 		}
 	}
 
+	& .title {
+		&.bordered {
+			&::after {
+				display : none;
+				@media (min-width : $lg) {
+					display : block;
+				}
+			}
+		}
+	}
+
 	&__text {
 		& p {
 			font-size : 14px;

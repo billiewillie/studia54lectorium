@@ -36,3 +36,20 @@ const enableSwiper = function () {
 // keep an eye on viewport size changes
 breakpoint.addEventListener('change', breakpointChecker);
 breakpointChecker();
+
+const borderedObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('shown');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    rootMargin: '0px 0px -200px'
+  }
+);
+
+document
+  .querySelectorAll('.bordered')
+  .forEach(item => borderedObserver.observe(item));

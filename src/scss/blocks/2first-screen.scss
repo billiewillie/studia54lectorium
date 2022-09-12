@@ -2,24 +2,23 @@
 	display     : flex;
 	align-items : stretch;
 	position    : relative;
-	overflow-x  : hidden;
 
 	@media (min-width : $lg) {
 		min-height  : 570px;
 		margin-top  : -120px;
 		padding-top : 120px;
+		overflow-x  : hidden;
 	}
 
 
 	& .container {
-		position        : relative;
-		flex-direction  : column;
-		justify-content : space-between;
-		row-gap         : 10px;
+		position       : relative;
+		flex-direction : column;
+		row-gap        : 10px;
 
 		@media (min-width : $md) {
-			row-gap : 30px;
-			justify-content: flex-start;
+			row-gap         : 30px;
+			justify-content : flex-start;
 		}
 	}
 

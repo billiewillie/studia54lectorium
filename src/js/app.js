@@ -54,9 +54,16 @@ document
   .querySelectorAll('.bordered')
   .forEach(item => borderedObserver.observe(item));
 
-const questions = Array.from(document.querySelectorAll('.qa__item-question'));
+const questions = Array.from(document.querySelectorAll('.accordion__trigger'));
 questions.forEach(item => {
   item.addEventListener('click', () => {
-    item.closest('.qa__item').classList.toggle('show');
+    item.closest('.accordion__parent').classList.toggle('show');
   });
+});
+
+document.querySelector('.show__content-button').addEventListener('click', () => {
+  // this.classList.add('clicked');
+  document.querySelector('.show__content').classList.add('clicked');
+  document.querySelector('.interview__list').classList.add('show');
+
 });

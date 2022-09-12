@@ -26,20 +26,33 @@
 	}
 
 	&__item {
-		padding          : 30px 15px;
+		padding          : 30px 15px 0;
 		background-color : var(--grey);
 		display          : flex;
 		flex-direction   : column;
 		row-gap          : 20px;
+		overflow         : hidden;
 
 		@media (min-width : $lg) {
-			padding : 60px;
+			padding : 60px 60px 0;
 			row-gap : 38px;
 		}
 
-		&.active {
+		&.show {
 			& .shedule__header-title {
 				color : var(--gold);
+			}
+
+			& .inner__list {
+				animation : 0.5s ease forwards slideInShedule;
+				@media (min-width : $lg) {
+					animation : 0.5s ease forwards slideInSheduleLg;
+
+				}
+			}
+
+			& .shedule__toggle {
+				transform : rotate(180deg);
 			}
 		}
 	}
@@ -52,6 +65,7 @@
 		padding-bottom : 20px;
 		border-bottom  : 1px solid var(--gold);
 		align-items    : flex-start;
+		cursor         : pointer;
 
 		@media (min-width : $md) {
 			flex            : auto;
@@ -66,8 +80,9 @@
 	}
 
 	& .shedule__header-title {
-		padding   : 0;
-		font-size : 14px;
+		padding    : 0;
+		font-size  : 14px;
+		transition : color 0.3s ease;
 		@media (min-width : $md) {
 			font-size : 20px;
 			flex      : auto;
@@ -100,9 +115,12 @@
 		flex-direction : column;
 		row-gap        : 10px;
 		padding-left   : 15px;
+		max-height     : 0;
+		animation      : 0.5s ease forwards slideOutShedule;
 
 		@media (min-width : $lg) {
-			row-gap : 20px;
+			row-gap   : 20px;
+			animation : 0.5s ease forwards slideOutSheduleLg;
 		}
 	}
 
@@ -139,11 +157,12 @@
 	}
 
 	&__toggle {
-		position : absolute;
-		right    : 0;
-		top      : 0;
-		width    : 18px;
-		height   : 8px;
+		position   : absolute;
+		right      : 0;
+		top        : 4px;
+		width      : 18px;
+		height     : 8px;
+		transition : transform 0.3s ease;
 
 		@media (min-width : $md) {
 			position : relative;
@@ -160,11 +179,70 @@
 	}
 
 	&__toggle-icon {
-		width  : 18px;
-		height : 8px;
+		width   : 18px;
+		height  : 8px;
+		display : block;
 		@media (min-width : $lg) {
 			width  : 25px;
 			height : 11px;
 		}
+	}
+}
+
+@keyframes slideInShedule {
+	from {
+		max-height     : 0;
+		padding-bottom : 0;
+	}
+
+	to {
+		max-height     : 1000px;
+		padding-bottom : 30px;
+	}
+}
+
+@keyframes slideInSheduleLg {
+	from {
+		max-height     : 0;
+		padding-bottom : 0;
+	}
+
+	to {
+		max-height     : 1000px;
+		padding-bottom : 60px;
+	}
+}
+
+@keyframes slideOutShedule {
+	0% {
+		max-height     : 1000px;
+		padding-bottom : 30px;
+	}
+
+	50% {
+		max-height     : 200px;
+		padding-bottom : 30px;
+	}
+
+	100% {
+		max-height     : 0;
+		padding-bottom : 0;
+	}
+}
+
+@keyframes slideOutSheduleLg {
+	0% {
+		max-height     : 1000px;
+		padding-bottom : 60px;
+	}
+
+	50% {
+		max-height     : 200px;
+		padding-bottom : 60px;
+	}
+
+	100% {
+		max-height     : 0;
+		padding-bottom : 0;
 	}
 }

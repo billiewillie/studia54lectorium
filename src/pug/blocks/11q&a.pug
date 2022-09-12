@@ -15,10 +15,10 @@ include ../mixins/title
   .container
     +title('вопросы и ответы')
     ul.qa__list
-      li.qa__item.show
-        p.qa__item-question Кто может стать участником?
+      li.qa__item.accordion__parent.show
+        p.qa__item-question.accordion__trigger Кто может стать участником?
         p.qa__item-answer Нам не важно, какой у вас стаж. Главное — это наличие опыта работы и базовых знаний дизайна интерьера, которые вы уже применили на практике, а также портфолио. Именно портфолио будет ключевым фактором при наборе группы.
       each item in qa
-        li.qa__item
-          p.qa__item-question= item.question
+        li.qa__item.accordion__parent
+          p.qa__item-question.accordion__trigger= item.question
           p.qa__item-answer= item.answer

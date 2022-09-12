@@ -3,17 +3,6 @@ include ../mixins/title
 -
   let lessons = [
     {
-      title: '/1 Планировочное решение',
-      date: '17/10',
-      time: '19:00',
-      topics: [
-        "Обмерный план",
-        "Функциональное зонирование",
-        "Примеры планировок и реальные случаи из практики",
-        "Правила для «мокрых» зон",
-      ]
-    },
-    {
       title: '/2 эргономика',
       date: '18/10',
       time: '19:00',
@@ -66,9 +55,33 @@ include ../mixins/title
   .container
     +title('Содержание интенсива')
     ul.shedule__list
+      li.shedule__item.accordion__parent.show
+        .shedule__item-header.accordion__trigger
+          h3.shedule__header-title.title /1 Планировочное решение
+          .shedule__header-dates
+            .shedule__date.shedule__header-item
+              svg.shedule__date-icon
+                use(xlink:href="./img/sprite.svg#calendar")
+              span 17/10
+            .shedule__time.shedule__header-item
+              svg.shedule__time-icon
+                use(xlink:href="./img/sprite.svg#history")
+              span 19:00
+          .shedule__toggle
+            svg.shedule__toggle-icon
+              use(xlink:href="./img/sprite.svg#arrow")
+        ul.inner__list
+          li.inner__list-item
+            p.inner__list-title Обмерный план
+          li.inner__list-item
+            p.inner__list-title Функциональное зонирование
+          li.inner__list-item
+            p.inner__list-title Примеры планировок и реальные случаи из практики
+          li.inner__list-item
+            p.inner__list-title Правила для «мокрых» зон
       each val in lessons
-        li.shedule__item.active
-          .shedule__item-header
+        li.shedule__item.accordion__parent
+          .shedule__item-header.accordion__trigger
             h3.shedule__header-title.title= val.title
             .shedule__header-dates
               .shedule__date.shedule__header-item

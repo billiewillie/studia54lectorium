@@ -47,6 +47,7 @@
 		display        : flex;
 		flex-direction : column;
 		align-items    : center;
+		position       : relative;
 
 		@media (min-width : $lg) {
 			grid-column-start : 1;
@@ -58,8 +59,29 @@
 		}
 
 		& picture {
+			position : relative;
 			@media (min-width : $lg) {
 				height : 100%;
+			}
+
+			&::before {
+				display          : block;
+				content          : '';
+				width            : 100%;
+				height           : calc(100% + 5px);
+				position         : absolute;
+				left             : 14px;
+				top              : 23px;
+				background-color : transparent;
+				border           : 1px solid var(--gold);
+
+				@media (min-width : $lg) {
+					left   : 25px;
+					top    : 39px;
+					width  : calc(100% - 6px);
+					height : calc(100% + 8px);
+				}
+
 			}
 		}
 
@@ -75,31 +97,38 @@
 		}
 
 		&-text {
-			display        : flex;
-			flex-direction : column;
-			align-items    : center;
+			position         : relative;
+			display          : flex;
+			flex-direction   : column;
+			align-items      : center;
+			background-color : var(--black);
+			padding          : 0 14px;
+
 			@media (min-width : $lg) {
 				position       : absolute;
 				top            : calc(100% + 25px);
 				left           : 0;
 				right          : 0;
 				margin         : auto;
-				width          : 100%;
+				width          : 280px;
 				display        : flex;
 				flex-direction : column;
 				align-items    : center;
 				row-gap        : 9px;
+				padding        : 0;
 			}
 		}
 
 		&-name {
-			font-size     : 24px;
+			font-size     : 18px;
 			margin-bottom : 6px;
 			margin-top    : 14px;
 
 			@media (min-width : $lg) {
 				margin-bottom : 0px;
 				margin-top    : 0;
+				font-size     : 24px;
+
 			}
 		}
 

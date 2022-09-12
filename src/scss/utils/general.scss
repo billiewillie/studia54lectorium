@@ -75,7 +75,7 @@ body {
 			left             : 0;
 			background-color : var(--gold);
 			top              : calc(100% + 20px);
-			transition       : width 0.3s ease 0.2s;
+			transition       : width 1s ease;
 
 			@media (min-width : $lg) {
 				top : calc(100% + 30px);

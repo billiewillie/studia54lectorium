@@ -1,38 +1,62 @@
 .interview {
 
 	& .container {
+		row-gap               : 43px;
 		display               : grid;
 		min-height            : 1352px;
 		justify-content       : space-between;
-		grid-template-columns : 649px 542px;
+		grid-template-columns : 1fr;
+
+		@media (min-width : $lg) {
+			grid-template-columns : 649px 542px;
+		}
 	}
 
 	&__list {
 		display        : flex;
 		flex-direction : column;
-		row-gap        : 60px;
+		row-gap        : 20px;
+		order          : 2;
+		@media (min-width : $lg) {
+			row-gap : 60px;
+		}
 	}
 
 	&__item {
 		display        : flex;
 		flex-direction : column;
-		row-gap        : 20px;
+		row-gap        : 10px;
+
+		@media (min-width : $lg) {
+			row-gap : 20px;
+		}
 
 		&-question {
 			color     : var(--gold);
-			font-size : 20px;
+			font-size : 16px;
+
+			@media (min-width : $lg) {
+				font-size : 20px;
+			}
 		}
 
 		&-answer {
-			font-size   : 18px;
+			font-size   : 14px;
 			text-indent : 30px;
+
+			@media (min-width : $lg) {
+				font-size : 18px;
+			}
 		}
 	}
 
 	&__photo {
-		top      : 80px;
-		width    : 542px;
-		height   : 782px;
-		position : sticky;
+		order : 1;
+		@media (min-width : $lg) {
+			top      : 80px;
+			width    : 542px;
+			height   : 782px;
+			position : sticky;
+		}
 	}
 }

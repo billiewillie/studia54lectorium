@@ -1,43 +1,35 @@
+-
+  let details = [
+    {
+      header: 'для кого?',
+      icon: 'people',
+      text: 'Для практикующих дизайнеров с опытом работы, которые хотят уйти из фриланса и начать работать с масштабными проектами, и имеют портфолио'
+    },
+    {
+      header: 'какой формат?',
+      icon: 'extension',
+      text: 'Интенсив будет состоять из пяти интерактивных лекций в очном формате'
+    },
+    {
+      header: 'когда и где?',
+      icon: 'alarm',
+      text: 'В октябре 2022 года в г. Санкт-Петербург, ул. Новгородская, д. 23, офис 340 (ст. метро Чернышевская, Новочеркасская, Пл. Александра Невского)'
+    },
+    {
+      header: 'что понадобится?',
+      icon: 'lamp',
+      text: 'Для выполнения практических заданий понадобятся программы ArchiCAD или AutoCAD и Photoshop'
+    },
+  ]
+
 .details
   .container
     ul.details__list
-      li.details__item
-        .details__header
-          svg.details__icon
-            use(xlink:href="./img/sprite.svg#people")
-          span.details__title.title.gold для кого?
-        .details__content
-          p
-            | Для практикующих дизайнеров с опытом работы,
-            | которые хотят уйти из фриланса и начать работать с масштабными проектами,
-            | и имеют портфолио
-      li.details__item
-        .details__header
-          svg.details__icon
-            use(xlink:href="./img/sprite.svg#extension")
-          span.details__title.title.gold для кого?
-        .details__content
-          p
-            | Для практикующих дизайнеров с опытом работы,
-            | которые хотят уйти из фриланса и начать работать с масштабными проектами,
-            | и имеют портфолио
-      li.details__item
-        .details__header
-          svg.details__icon
-            use(xlink:href="./img/sprite.svg#alarm")
-          span.details__title.title.gold для кого?
-        .details__content
-          p
-            | Для практикующих дизайнеров с опытом работы,
-            | которые хотят уйти из фриланса и начать работать с масштабными проектами,
-            | и имеют портфолио
-      li.details__item
-        .details__header
-          svg.details__icon
-            use(xlink:href="./img/sprite.svg#lamp")
-          span.details__title.title.gold для кого?
-        .details__content
-          p
-            | Для практикующих дизайнеров с опытом работы,
-            | которые хотят уйти из фриланса и начать работать с масштабными проектами,
-            | и имеют портфолио
+      each item in details
+        li.details__item
+          .details__header
+            svg.details__icon
+              use(xlink:href=`./img/sprite.svg#${item.icon}`)
+            span.details__title.title.gold= item.header
+          .details__content
+            p= item.text

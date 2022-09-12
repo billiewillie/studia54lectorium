@@ -57,11 +57,12 @@
 		}
 
 		@media (min-width : $lg) {
-			align-items: flex-start;
-			text-align : left;
-			padding    : 0;
-			width      : 576px;
-			background : none;
+			align-items : flex-start;
+			text-align  : left;
+			padding     : 0;
+			width       : 587px;
+			background  : none;
+			row-gap     : 48px;
 		}
 
 		& a {

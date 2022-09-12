@@ -8,7 +8,10 @@
 
 		@media (min-width : $md) {
 			padding : 0 15px;
+		}
 
+		@media (min-width : $lg) {
+			row-gap : 52px;
 		}
 	}
 
@@ -31,7 +34,7 @@
 
 		@media (min-width : $lg) {
 			padding : 60px;
-
+			row-gap : 38px;
 		}
 
 		&.active {
@@ -56,6 +59,10 @@
 			column-gap      : 60px;
 			justify-content : space-between;
 		}
+
+		@media (min-width : $lg) {
+			column-gap : 62px;
+		}
 	}
 
 	& .shedule__header-title {
@@ -71,11 +78,21 @@
 		display     : flex;
 		column-gap  : 6px;
 		align-items : center;
+		font-family : $font_title;
+
+		@media (min-width : $lg) {
+			font-size  : 20px;
+			column-gap : 14px;
+		}
 	}
 
 	& .shedule__header-dates {
 		display    : flex;
 		column-gap : 20px;
+
+		@media (min-width : $lg) {
+			column-gap : 39px;
+		}
 	}
 
 	& .inner__list {
@@ -133,10 +150,21 @@
 			display  : flex;
 			top      : 6px;
 		}
+
+		@media (min-width : $lg) {
+			width  : 25px;
+			height : 11px;
+			right  : 3px;
+			top    : 7px;
+		}
 	}
 
 	&__toggle-icon {
 		width  : 18px;
 		height : 8px;
+		@media (min-width : $lg) {
+			width  : 25px;
+			height : 11px;
+		}
 	}
 }

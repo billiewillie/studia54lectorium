@@ -39,10 +39,10 @@ body {
 		row-gap : 120px;
 		padding : 40px 0;
 	}
-	//
-	//@media (min-width : $lg) {
-	//	overflow : visible;
-	//}
+
+	@media (min-width : $lg) {
+		overflow : visible;
+	}
 }
 
 .container {

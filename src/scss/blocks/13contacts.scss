@@ -56,6 +56,33 @@
 		display     : flex;
 		column-gap  : 20px;
 		align-items : center;
+
+		& .contacts__icon {
+			transition: background-color 0.3s ease;
+
+			& path {
+				transition: stroke 0.3s ease;
+			}
+
+			& rect {
+				transition: stroke 0.3s ease;
+			}
+		}
+
+		&:hover {
+			& .contacts__icon {
+				background-color : var(--gold);
+
+				& path {
+					stroke : var(--white);
+				}
+
+				& rect {
+					stroke : var(--white);
+				}
+			}
+
+		}
 	}
 
 	&__icon {
@@ -70,8 +97,8 @@
 		align-items           : center;
 
 		@media (min-width : $lg) {
-			width                 : 46px;
-			height                : 46px;
+			width  : 46px;
+			height : 46px;
 		}
 	}
 
@@ -80,8 +107,8 @@
 		height : 13px;
 
 		@media (min-width : $lg) {
-			width                 : 16px;
-			height                : 16px;
+			width  : 16px;
+			height : 16px;
 		}
 	}
 
@@ -90,8 +117,8 @@
 		height : 9px;
 
 		@media (min-width : $lg) {
-			width                 : 16px;
-			height                : 11px;
+			width  : 16px;
+			height : 11px;
 		}
 	}
 

@@ -6,6 +6,7 @@
 
 // vendors
 @import "vendors/swiper";
+@import "vendors/fancybox";
 
 // blocks
 @import "blocks/menu";
@@ -28,3 +29,5 @@
 @import "blocks/form";
 @import "blocks/popup";
 @import "blocks/success";
+@import "blocks/backdrop";
+@import "blocks/mobile-menu";

@@ -2,9 +2,15 @@
 	color         : white;
 	width         : 100%;
 	margin-bottom : -20px;
+	position      : relative;
+	z-index       : 1;
 
 	@media (min-width : $lg) {
 		margin-bottom : 0px;
+	}
+
+	& .button {
+		width : initial;
 	}
 
 	& .container {
@@ -12,8 +18,8 @@
 		flex-direction  : column;
 		align-items     : center;
 		justify-content : space-between;
-		row-gap         : 40px;
-		padding-bottom  : 20px;
+		row-gap         : 41px;
+		padding         : 0 0 20px 0;
 		width           : calc(100% - 30px);
 		border-bottom   : 1px solid rgba(255, 255, 255, 0.3);
 
@@ -26,9 +32,15 @@
 	}
 
 	&-content {
-		display     : flex;
-		column-gap  : 60px;
-		align-items : center;
+		display         : flex;
+		column-gap      : 60px;
+		align-items     : center;
+		width           : 100%;
+		justify-content : space-between;
+
+		@media (min-width : $lg) {
+			width : auto;
+		}
 	}
 }
 
@@ -42,4 +54,6 @@
 	& img {
 		display : block;
 	}
+
+
 }

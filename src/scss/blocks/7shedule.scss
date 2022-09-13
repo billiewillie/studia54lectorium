@@ -159,7 +159,7 @@
 	&__toggle {
 		position   : absolute;
 		right      : 0;
-		top        : 4px;
+		top        : 6px;
 		width      : 18px;
 		height     : 8px;
 		transition : transform 0.3s ease;
@@ -167,7 +167,6 @@
 		@media (min-width : $md) {
 			position : relative;
 			display  : flex;
-			top      : 6px;
 		}
 
 		@media (min-width : $lg) {

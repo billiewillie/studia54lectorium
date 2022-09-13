@@ -1,7 +1,22 @@
 import Swiper, {Navigation, Pagination} from "swiper";
+import {Fancybox} from "@fancyapps/ui";
+
+const backdrop = document.querySelector('.backdrop');
 
 new Swiper('.gallery__list', {
+  modules: [ Navigation, Pagination ],
   slidesPerView: 1,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".gallery__pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return `<span class="${className}"></span>`;
+    },
+  },
   breakpoints: {
     768: {
       spaceBetween: 21,
@@ -33,7 +48,6 @@ const enableSwiper = function () {
   });
 };
 
-// keep an eye on viewport size changes
 breakpoint.addEventListener('change', breakpointChecker);
 breakpointChecker();
 
@@ -62,8 +76,42 @@ questions.forEach(item => {
 });
 
 document.querySelector('.show__content-button').addEventListener('click', () => {
-  // this.classList.add('clicked');
   document.querySelector('.show__content').classList.add('clicked');
   document.querySelector('.interview__list').classList.add('show');
+});
 
+const setBackdrop = () => {
+  if (!backdrop.classList.contains('show')) {
+    backdrop.classList.add('show');
+  } else {
+    backdrop.classList.add('hide');
+    setTimeout(() => {
+      backdrop.classList.remove("hide", "show");
+    }, 300);
+  }
+};
+
+document.querySelector('.more-button').addEventListener('click', function () {
+  document.querySelector('.mobile-menu').classList.toggle('show');
+  setBackdrop();
+});
+
+backdrop.addEventListener('click', function () {
+  document.querySelector('.mobile-menu').classList.toggle('show');
+  setBackdrop();
+});
+
+document.querySelectorAll('.more-button-list-item').forEach(item => {
+  item.addEventListener('click', (e) => {
+    document.querySelector('.mobile-menu').classList.toggle('show');
+    setBackdrop();
+  });
+});
+
+document.querySelector('.button').addEventListener('click', function () {
+  document.querySelector('.mobile-menu').classList.remove('show');
+  backdrop.classList.add('hide');
+  setTimeout(() => {
+    backdrop.classList.remove("hide", "show");
+  }, 300);
 });

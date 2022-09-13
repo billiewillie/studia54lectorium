@@ -59,8 +59,12 @@ body {
 	font-size      : 20px;
 	line-height    : 1.5;
 
+	@media (min-width : $md) {
+		font-size : 28px;
+	}
+
 	@media (min-width : $lg) {
-		font-size : 38px;
+		font-size : 32px;
 	}
 
 	&.bordered {

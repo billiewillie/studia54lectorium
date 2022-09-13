@@ -1,4 +1,8 @@
 .speaker {
+
+	@media (min-width : $lg) {
+		margin-top : -63px;
+	}
 	& .container {
 		flex-direction : column;
 	}
@@ -28,7 +32,6 @@
 			@media (min-width : $lg) {
 				height : 722px;
 			}
-
 		}
 
 		& picture {
@@ -74,11 +77,14 @@
 			display        : flex;
 			flex-direction : column;
 			row-gap        : 6px;
-			margin-top     : -13px;
+			margin-top     : -26px;
 			text-align     : center;
 			align-self     : center;
 			align-items    : center;
 
+			@media (min-width : $lg) {
+				margin-top : -13px;
+			}
 
 			& h3 {
 				font-size        : 18px;
@@ -86,18 +92,19 @@
 				background-color : var(--black);
 				display          : flex;
 				justify-content  : center;
+				padding          : 0 15px;
 				@media (min-width : $lg) {
 					font-size : 24px;
-					width     : 240px;
-
+					width     : 245px;
 				}
-
 			}
 
 			p {
 				font-size : 14px;
+				max-width : 184px;
 				@media (min-width : $lg) {
 					font-size : 16px;
+					max-width : inherit;
 				}
 			}
 		}
@@ -110,7 +117,7 @@
 
 		@media (min-width : $lg) {
 			width       : 542px;
-			padding-top : 98px;
+			padding-top : 91px;
 		}
 	}
 
@@ -128,7 +135,6 @@
 			font-size   : 14px;
 			padding-top : 10px;
 			width       : 100%;
-
 
 			@media (min-width : $lg) {
 				padding-top : 25px;

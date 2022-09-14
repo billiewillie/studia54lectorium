@@ -14,9 +14,6 @@
 
 	& .title {
 		margin-bottom : 10px;
-		@media (min-width : $md) {
-			font-size : 38px;
-		}
 	}
 
 	&__image {
@@ -51,7 +48,6 @@
 
 		@media (min-width : $md) {
 			padding    : 106px 80px;
-			text-align : center;
 			font-size  : 18px;
 			background : linear-gradient(203.03deg, rgba(14, 14, 14, 0.9) 15.35%, rgba(14, 14, 14, 0) 69.27%);
 		}

@@ -19,9 +19,14 @@ html {
 body {
 	font-family      : $font;
 	font-weight      : 400;
+	font-size        : 14px;
 	line-height      : 1.5;
 	color            : var(--white);
 	background-color : var(--black);
+	scroll-behavior  : smooth;
+	@media (min-width : $md) {
+		font-size : 18px;
+	}
 }
 
 .wrapper {
@@ -34,6 +39,8 @@ body {
 	min-height      : 100vh;
 	flex-direction  : column;
 	justify-content : space-between;
+	scroll-behavior : smooth;
+
 
 	@media (min-width : $md) {
 		row-gap : 120px;

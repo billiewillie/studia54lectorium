@@ -10,7 +10,7 @@ ul.menu {
       position: relative;
       cursor: pointer;
 
-      @media (min-width: $lg) {
+      @media (min-width: $md) {
         font-size: 16px;
         line-height: 20px;
       }

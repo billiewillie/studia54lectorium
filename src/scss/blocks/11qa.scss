@@ -34,7 +34,7 @@
 			transition   : color 0.3s ease;
 			cursor       : pointer;
 			position     : relative;
-			@media (min-width : $lg) {
+			@media (min-width : $md) {
 				font-size : 20px;
 			}
 
@@ -45,7 +45,7 @@
 				width                 : 16px;
 				height                : 2px;
 				left                  : 10px;
-				top                   : 11px;
+				top                   : 15px;
 				-webkit-border-radius : 20px;
 				-moz-border-radius    : 20px;
 				border-radius         : 20px;
@@ -63,7 +63,7 @@
 				width                 : 16px;
 				height                : 2px;
 				left                  : 10px;
-				top                   : 11px;
+				top                   : 15px;
 				transform             : rotate(-90deg);
 				-webkit-border-radius : 20px;
 				-moz-border-radius    : 20px;
@@ -82,7 +82,7 @@
 			padding-left : 44px;
 			animation    : 0.3s ease forwards slideOut;
 
-			@media (min-width : $lg) {
+			@media (min-width : $md) {
 				font-size : 18px;
 			}
 		}

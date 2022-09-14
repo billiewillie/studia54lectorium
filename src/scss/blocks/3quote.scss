@@ -2,161 +2,49 @@
 	margin-top : 15px;
 	@media (min-width : $lg) {
 		margin-top    : -10px;
-		margin-bottom : 120px;
+		margin-bottom : 8px;
 	}
 
 	& .container {
-		row-gap        : 30px;
+		gap            : 40px;
 		flex-direction : column;
+
+		@media (min-width : $md) {
+			gap : 60px;
+		}
 
 		@media (min-width : $lg) {
 			display               : grid;
-			grid-template-columns : 413px 738px;
-			grid-template-rows    : repeat(2, auto);
-			row-gap               : 60px;
+			grid-template-columns : 548px 648px;
+			gap                   : inherit;
 			justify-content       : space-between;
 		}
 	}
 
-	& .title {
+	&__title {
+
 		&.bordered {
 			&::after {
-				display : none;
+				@media (min-width : $md) {
+					top : calc(100% + 30px);
+				}
 				@media (min-width : $lg) {
-					display : block;
+					display : none;
 				}
 			}
 		}
 	}
 
 	&__text {
-		& p {
-			font-size : 14px;
-			@media (min-width : $lg) {
-				font-size : 18px;
-			}
+		font-size : 14px;
+		@media (min-width : $md) {
+			font-size : 18px;
 		}
 
 		& a {
 			text-decoration       : underline;
 			text-underline-offset : 3px;
 		}
+
 	}
-
-	&__photo {
-		display        : flex;
-		flex-direction : column;
-		align-items    : center;
-		position       : relative;
-
-		@media (min-width : $lg) {
-			grid-column-start : 1;
-			grid-column-end   : 2;
-			grid-row-start    : 1;
-			grid-row-end      : 3;
-			position          : relative;
-
-		}
-
-		& picture {
-			position : relative;
-			@media (min-width : $lg) {
-				height : 100%;
-			}
-
-			&::before {
-				display          : block;
-				content          : '';
-				width            : 100%;
-				height           : calc(100% + 5px);
-				position         : absolute;
-				left             : 14px;
-				top              : 23px;
-				background-color : transparent;
-				border           : 1px solid var(--gold);
-
-				@media (min-width : $lg) {
-					left   : 25px;
-					top    : 39px;
-					width  : calc(100% - 6px);
-					height : calc(100% + 8px);
-				}
-
-			}
-		}
-
-		& img {
-			width : 77vw;
-
-			@media (min-width : $lg) {
-				width      : inherit;
-				object-fit : cover;
-				height     : 526px;
-				width      : 413px;
-			}
-		}
-
-		&-text {
-			position         : relative;
-			display          : flex;
-			flex-direction   : column;
-			align-items      : center;
-			background-color : var(--black);
-			padding          : 0 14px;
-
-			@media (min-width : $lg) {
-				position       : absolute;
-				top            : calc(100% + 25px);
-				left           : 0;
-				right          : 0;
-				margin         : auto;
-				width          : 280px;
-				display        : flex;
-				flex-direction : column;
-				align-items    : center;
-				row-gap        : 9px;
-				padding        : 0;
-			}
-		}
-
-		&-name {
-			font-size     : 18px;
-			margin-bottom : 6px;
-			margin-top    : 14px;
-
-			@media (min-width : $lg) {
-				margin-bottom : 0px;
-				margin-top    : 0;
-				font-size     : 24px;
-
-			}
-		}
-
-		&-about {
-			font-size  : 14px;
-			max-width  : 170px;
-			text-align : center;
-
-			@media (min-width : $lg) {
-				font-size : 16px;
-				max-width : inherit;
-			}
-		}
-	}
-
-	&__title {
-		font-size : 20px;
-
-		@media (min-width : $lg) {
-			font-size : 38px;
-		}
-	}
-
-	&__text {
-		font-size : 14px;
-		@media (min-width : $lg) {
-			font-size : 18px;
-		}
-	}
-
 }

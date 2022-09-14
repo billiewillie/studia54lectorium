@@ -39,6 +39,7 @@
 	}
 
 	&__image {
+		min-height: 217px;
 		@media (min-width : $lg) {
 			top      : 0;
 			left     : 0;
@@ -70,6 +71,45 @@
 
 			@media (min-width : $md) {
 				top : 2px;
+			}
+		}
+	}
+
+	&__pagination {
+		position        : relative;
+		bottom          : 0;
+		left            : 0;
+		right           : 0;
+		margin          : auto;
+		display         : flex;
+		align-items     : center;
+		justify-content : center;
+
+		&.swiper-horizontal > .swiper-pagination-bullets,
+		&.swiper-pagination-bullets.swiper-pagination-horizontal {
+			bottom     : inherit;
+			left       : inherit;
+			margin-top : 30px;
+
+			@media (min-width : $md) {
+				margin-top : 35px;
+			}
+		}
+
+		& .swiper-pagination-bullet {
+			width      : calc(100% / 4);
+			overflow   : hidden;
+			transition : background-color 0.3s linear, color 0.3s linear, border-bottom 0.3s linear;
+			cursor     : pointer;
+			text-align : center;
+			color      : transparent;
+			height     : 1px;
+			background : rgba(53, 53, 53, 1);
+
+
+			&-active {
+				background : var(--gold);
+				height     : 2px;
 			}
 		}
 	}

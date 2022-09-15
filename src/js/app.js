@@ -99,9 +99,11 @@ const setBackdrop = () => {
   }
 };
 
-document.querySelector('.more-button').addEventListener('click', function () {
-  document.querySelector('.mobile-menu').classList.toggle('show');
-  setBackdrop();
+document.querySelectorAll('.more-button').forEach(item => {
+  item.addEventListener('click', function () {
+    item.closest('.mobile-menu').classList.toggle('show');
+    setBackdrop();
+  });
 });
 
 backdrop.addEventListener('click', function () {
@@ -124,56 +126,31 @@ document.querySelector('.button').addEventListener('click', function () {
   }, 300);
 });
 
-// const header = document.querySelector("header");
-// const headerObserver = new IntersectionObserver(
-//   ([entry]) => {
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add('shown');
-//       console.log(entry);
-//     }
-//   }, {
-//     rootMargin: '-300px 0px 0px 0px',
-//     threshold: 0,
-//   }
-// );
-//
-// headerObserver.observe(header)
-// let lastScroll = 0;
-//
-// const throttle = (func, time = 100) => {
-//   let lastTime = 0;
-//   return () => {
-//     const now = new Date();
-//     if (now - lastTime >= time) {
-//       func();
-//       time = now;
-//     }
-//   };
-// };
-//
-// const validateHeader = () => {
-//   const windowY = window.scrollY;
-//   const windowH = window.innerHeight;
-//
-//   if (windowY > windowH) {
-//     // We passed the first section, set a toggable class
-//     header.classList.add("is-fixed");
-//     // Determine is we ready to animate
-//     if (windowY > windowH + 40) {
-//       header.classList.add("can-animate");
-//       if (windowY < lastScroll) {
-//         // Determine if we scrolling up
-//         header.classList.add("scroll-up");
-//       } else {
-//         header.classList.remove("scroll-up");
-//       }
-//     } else {
-//       header.classList.remove("scroll-up");
-//     }
-//   } else {
-//     header.classList.remove("is-fixed", "can-animate");
-//   }
-//   lastScroll = windowY;
-// };
-//
-// window.addEventListener("scroll", throttle(validateHeader, 100));
+const header = document.querySelector(".header");
+const headerScroll = document.querySelector(".header-scroll");
+
+const headerObserver = new IntersectionObserver(
+  ([entry]) => {
+    if (!entry.isIntersecting || entry.intersectionRatio <= 0) {
+      let scrollPos = 0;
+      window.addEventListener('scroll', function () {
+        if ((document.body.getBoundingClientRect()).top > scrollPos) {
+          headerScroll.classList.add('shown');
+        } else {
+          headerScroll.classList.remove('shown');
+          document.querySelector('.mobile-menu').classList.remove('show');
+          backdrop.classList.remove("show");
+        }
+        scrollPos = (document.body.getBoundingClientRect()).top;
+      });
+    } else {
+      window.addEventListener('scroll', function () {
+        headerScroll.classList.remove('shown');
+        document.querySelector('.mobile-menu').classList.remove('show');
+        backdrop.classList.remove("show");
+      });
+    }
+  }
+);
+
+headerObserver.observe(header);

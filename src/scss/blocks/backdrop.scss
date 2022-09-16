@@ -24,14 +24,14 @@
 	}
 	100% {
 		background      : rgba(14, 14, 14, 0.05);
-		backdrop-filter : blur(8px);
+		backdrop-filter : blur(20px);
 	}
 }
 
 @keyframes overlayOut {
 	0% {
 		background      : rgba(14, 14, 14, 0.05);
-		backdrop-filter : blur(8px);
+		backdrop-filter : blur(20px);
 	}
 	100% {
 		background      : rgba(14, 14, 14, 0);

@@ -105,6 +105,90 @@ a {
 	color : var(--white);
 }
 
+.social {
+	font-size      : 14px;
+	display        : flex;
+	flex-direction : column;
+	row-gap        : 15px;
+	text-transform : uppercase;
+	align-items    : center;
+
+	@media (min-width : $lg) {
+		font-size : 16px;
+		row-gap   : 20px;
+	}
+
+	&__list {
+		display    : flex;
+		column-gap : 10px;
+
+		@media (min-width : $lg) {
+			column-gap : 19px;
+		}
+	}
+
+	&__link {
+		display               : flex;
+		justify-content       : center;
+		align-items           : center;
+		background-color      : #211D19;
+		width                 : 36px;
+		height                : 36px;
+		-webkit-border-radius : 50px;
+		-moz-border-radius    : 50px;
+		border-radius         : 50px;
+		transition            : background-color .3s ease;
+
+		@media (min-width : $lg) {
+			width  : 46px;
+			height : 46px;
+		}
+
+		& path {
+			transition : fill .3s ease;
+
+		}
+
+		&:hover {
+			background-color : var(--gold);
+
+			& path {
+				fill : var(--white);
+			}
+		}
+
+	}
+
+	&--pinterest {
+		width  : 11px;
+		height : 14px;
+
+		@media (min-width : $lg) {
+			width  : 14px;
+			height : 18px;
+		}
+	}
+
+	&--vk {
+		width  : 17px;
+		height : 11px;
+
+		@media (min-width : $lg) {
+			width  : 22px;
+			height : 14px;
+		}
+	}
+
+	&--instagram {
+		width  : 14px;
+		height : 14px;
+
+		@media (min-width : $lg) {
+			width  : 18px;
+			height : 18px;
+		}
+	}
+}
 
 .gold {
 	color : var(--gold);

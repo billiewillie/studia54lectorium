@@ -17,7 +17,7 @@
 			background    : none;
 			width         : 100%;
 			padding       : 0 0 6px;
-			font-size     : 16px;
+			font-size     : 13px;
 			font-weight   : 300;
 			color         : #fff;
 			transition    : border 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -27,9 +27,12 @@
 				color       : rgba(255, 255, 255, 0.5);
 				font-size   : 13px;
 				font-weight : 300;
+				opacity: 0;
+				transition: opacity 0.3s ease-out;
+				line-height : 1;
 
 				@media (min-width : $md) {
-					font-size : 16px;
+					font-size : 20px;
 				}
 			}
 
@@ -62,6 +65,7 @@
 
 			&::placeholder {
 				color : #fff;
+				opacity: 0.5;
 			}
 		}
 

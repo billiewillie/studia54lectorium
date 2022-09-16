@@ -4,7 +4,7 @@
 	position    : relative;
 	overflow    : hidden;
 
-	@media (min-width : $lg) {
+	@media (min-width : 1024px) {
 		overflow : visible;
 	}
 
@@ -34,7 +34,7 @@
 			background-size     : 120%;
 		}
 
-		@media (min-width : $lg) {
+		@media (min-width : 1024px) {
 			padding             : 124px 62px 147px;
 			overflow            : visible;
 			background-size     : 90%;
@@ -54,6 +54,7 @@
 		}
 
 		@media (min-width : $lg) {
+			margin-bottom : 50px;
 			font-size : 70px;
 		}
 	}
@@ -79,59 +80,38 @@
 	}
 
 	& .first__pic {
-		position   : relative;
-		margin-top : 8px;
-		z-index    : 1;
+		position : relative;
+		z-index  : 1;
 
 		@media (min-width : $md) {
 			position   : absolute;
-			bottom     : -50px;
+			bottom     : 0px;
 			right      : 0;
 			margin-top : 0;
-			width      : 344px;
+			width      : 440px;
 			height     : 527px;
+		}
+
+		@media (min-width : 1024px) {
+			bottom : 0;
+			right  : -30px;
+			width  : 600px;
+			height : 700px;
 		}
 
 		@media (min-width : $lg) {
 			bottom : 0;
-			right  : 64px;
-			width  : 514px;
-			height : 788px;
+			right  : -30px;
+			width  : 700px;
+			height : 770px;
 		}
 
 		& img {
-			transform : rotate(-4px);
-		}
-
-		&::before {
-			display       : block;
-			position      : absolute;
-			content       : '';
-			top           : 0;
-			bottom        : 0;
-			margin        : auto;
-			left          : 15%;
-			width         : 80vw;
-			height        : 100vw;
-			background    : radial-gradient(rgba(203, 163, 124, 0.35) 0%, rgba(203, 163, 124, 0) 100%);
-			filter        : blur(25px);
-			border-radius : 50%;
-			z-index       : -1;
-
-			@media (min-width : $md) {
-				width  : 300px;
-				height : 500px;
-			}
-
-			@media (min-width : $lg) {
-				width  : 500px;
-				height : 650px;
-				left   : 0px;
-				bottom : 30px;
-				top    : inherit;
-				margin : inherit;
-				filter : blur(35px);
-			}
+			transform       : rotate(-4px);
+			width           : 100%;
+			height          : 100%;
+			object-fit      : contain;
+			object-position : bottom center;
 		}
 	}
 }

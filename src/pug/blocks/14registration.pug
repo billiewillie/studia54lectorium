@@ -19,12 +19,13 @@ include ../mixins/button
             label.input-label Электронная почта
         .form-row
           span.wpcf7-form-control-wrap
-            input.input(type='tel' placeholder=" ")
+            input.input.js-phone-input(type='tel' placeholder='+7 (___) ___-__-__')
             label.input-label Телефон
         .form-row
           span.wpcf7-form-control-wrap
             input.input(type="url" placeholder=" ")
             label.input-label Ссылка на портфолио
         .form-row
-          +button({classes: "button button--solid", type: "submit"}) Отправить
+          button.button.button--solid Send
+          //+button({classes: "button button--solid", type: "submit"}) Отправить
       a.conditions.gold(href="./img/conditions.pdf" target="_blank") Условия участия

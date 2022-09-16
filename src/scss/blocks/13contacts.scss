@@ -23,6 +23,8 @@
 			justify-content  : center;
 			border-bottom    : 1px solid var(--gold);
 			background-color : transparent;
+			padding          : 84px 15px 0;
+
 		}
 
 		&-container {
@@ -34,9 +36,11 @@
 			justify-content : center;
 
 			@media (min-width : $lg) {
-				border-bottom : none;
-				align-items   : center;
-				max-width     : 712px;
+				row-gap        : 40px;
+				border-bottom  : none;
+				align-items    : center;
+				max-width      : 712px;
+				padding-bottom : 60px;
 			}
 		}
 	}
@@ -58,14 +62,14 @@
 		align-items : center;
 
 		& .contacts__icon {
-			transition: background-color 0.3s ease;
+			transition : background-color 0.3s ease;
 
 			& path {
-				transition: stroke 0.3s ease;
+				transition : stroke 0.3s ease;
 			}
 
 			& rect {
-				transition: stroke 0.3s ease;
+				transition : stroke 0.3s ease;
 			}
 		}
 
@@ -107,8 +111,8 @@
 		height : 13px;
 
 		@media (min-width : $lg) {
-			width  : 16px;
-			height : 16px;
+			width  : 17px;
+			height : 17px;
 		}
 	}
 
@@ -117,8 +121,8 @@
 		height : 9px;
 
 		@media (min-width : $lg) {
-			width  : 16px;
-			height : 11px;
+			width  : 17px;
+			height : 17px;
 		}
 	}
 

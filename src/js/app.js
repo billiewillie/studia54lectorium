@@ -353,7 +353,7 @@ gsap.to(".speaker-ring", {
 gsap.to(".speaker-ring", {
 	scrollTrigger: {
 		trigger: ".interview",
-		start: "0% +100%",
+		start: "70% +100%",
 		onEnter: () => {
 			speakerRing.style.top = "1450px";
 			speakerRing.classList.add("interview");

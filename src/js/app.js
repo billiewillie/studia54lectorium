@@ -350,59 +350,59 @@ gsap.to(".speaker-ring", {
 		},
 	},
 });
-// gsap.to(".speaker-ring", {
-// 	scrollTrigger: {
-// 		trigger: ".interview",
-// 		start: "0% +100%",
-// 		onEnter: () => {
-// 			speakerRing.style.top = "1450px";
-// 			speakerRing.classList.add("interview");
-// 		},
-// 		onLeaveBack: () => {
-// 			speakerRing.style.top = "900px";
-// 			speakerRing.classList.remove("interview");
-// 		},
-// 	},
-// });
-// gsap.to(".speaker-ring", {
-// 	scrollTrigger: {
-// 		trigger: ".interview",
-// 		start: "100% +140%",
-// 		onEnter: () => {
-// 			speakerRing.style.top = "1900px";
-// 			speakerRing.classList.add("interview2");
-// 		},
-// 		onLeaveBack: () => {
-// 			speakerRing.style.top = "1450px";
-// 			speakerRing.classList.remove("interview2");
-// 		},
-// 	},
-// });
-// gsap.to(".qa-ring", {
-// 	scrollTrigger: {
-// 		trigger: ".qa",
-// 		start: "0% +120%",
-// 		onEnter: () => {
-// 			qaRing.style.top = "0";
-// 			qaRing.classList.add("show");
-// 		},
-// 		onLeaveBack: () => {
-// 			qaRing.style.top = "0";
-// 			qaRing.classList.remove("show");
-// 		},
-// 	},
-// });
-// gsap.to(".qa-ring", {
-// 	scrollTrigger: {
-// 		trigger: ".qa",
-// 		start: "100% +150%",
-// 		onEnter: () => {
-// 			qaRing.style.top = "400px";
-// 			qaRing.classList.add("qa2");
-// 		},
-// 		onLeaveBack: () => {
-// 			qaRing.style.top = "0";
-// 			qaRing.classList.remove("qa2");
-// 		},
-// 	},
-// });
+gsap.to(".speaker-ring", {
+	scrollTrigger: {
+		trigger: ".interview",
+		start: "0% +100%",
+		onEnter: () => {
+			speakerRing.style.top = "1450px";
+			speakerRing.classList.add("interview");
+		},
+		onLeaveBack: () => {
+			speakerRing.style.top = "900px";
+			speakerRing.classList.remove("interview");
+		},
+	},
+});
+gsap.to(".speaker-ring", {
+	scrollTrigger: {
+		trigger: ".interview",
+		start: "100% +140%",
+		onEnter: () => {
+			speakerRing.style.top = "1900px";
+			speakerRing.classList.add("interview2");
+		},
+		onLeaveBack: () => {
+			speakerRing.style.top = "1450px";
+			speakerRing.classList.remove("interview2");
+		},
+	},
+});
+gsap.to(".qa-ring", {
+	scrollTrigger: {
+		trigger: ".qa",
+		start: "0% +120%",
+		onEnter: () => {
+			qaRing.style.top = "0";
+			qaRing.classList.add("show");
+		},
+		onLeaveBack: () => {
+			qaRing.style.top = "0";
+			qaRing.classList.remove("show");
+		},
+	},
+});
+gsap.to(".qa-ring", {
+	scrollTrigger: {
+		trigger: ".qa",
+		start: "100% +150%",
+		onEnter: () => {
+			qaRing.style.top = "400px";
+			qaRing.classList.add("qa2");
+		},
+		onLeaveBack: () => {
+			qaRing.style.top = "0";
+			qaRing.classList.remove("qa2");
+		},
+	},
+});

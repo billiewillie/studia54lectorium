@@ -321,7 +321,7 @@ gsap.to(".ring2", {
 gsap.to(".speaker-ring", {
 	scrollTrigger: {
 		trigger: ".speaker__photo",
-		start: "100% +100%",
+		start: "0% +50%",
 		onEnter: () => {
 			speakerRing.classList.add("show");
 		},

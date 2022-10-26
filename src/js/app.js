@@ -321,33 +321,21 @@ gsap.to(".ring2", {
 gsap.to(".speaker-ring", {
 	scrollTrigger: {
 		trigger: ".speaker__photo",
-		start: "0% +50%",
+		start: "100% +120%",
 		onEnter: () => {
-			speakerRing.classList.add("show");
+			speakerRing.style.top = "500px";
+			ringInner.style.height = `233px`;
+			ringInner.style.width = `233px`;
+			speakerRing.classList.add("speaker2");
 		},
 		onLeaveBack: () => {
-			speakerRing.classList.remove("show");
+			speakerRing.style.top = "0";
+			ringInner.style.height = `100%`;
+			ringInner.style.width = `100%`;
+			speakerRing.classList.remove("speaker2");
 		},
 	},
 });
-// gsap.to(".speaker-ring", {
-// 	scrollTrigger: {
-// 		trigger: ".speaker__photo",
-// 		start: "100% +120%",
-// 		onEnter: () => {
-// 			speakerRing.style.top = "500px";
-// 			ringInner.style.height = `233px`;
-// 			ringInner.style.width = `233px`;
-// 			speakerRing.classList.add("speaker2");
-// 		},
-// 		onLeaveBack: () => {
-// 			speakerRing.style.top = "0";
-// 			ringInner.style.height = `100%`;
-// 			ringInner.style.width = `100%`;
-// 			speakerRing.classList.remove("speaker2");
-// 		},
-// 	},
-// });
 // gsap.to(".speaker-ring", {
 // 	scrollTrigger: {
 // 		trigger: ".speaker__photo",

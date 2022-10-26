@@ -336,20 +336,20 @@ gsap.to(".speaker-ring", {
 		},
 	},
 });
-// gsap.to(".speaker-ring", {
-// 	scrollTrigger: {
-// 		trigger: ".speaker__photo",
-// 		start: "100% +50%",
-// 		onEnter: () => {
-// 			speakerRing.style.top = "900px";
-// 			speakerRing.classList.add("speaker3");
-// 		},
-// 		onLeaveBack: () => {
-// 			speakerRing.style.top = "500px";
-// 			speakerRing.classList.remove("speaker3");
-// 		},
-// 	},
-// });
+gsap.to(".speaker-ring", {
+	scrollTrigger: {
+		trigger: ".speaker__photo",
+		start: "100% +50%",
+		onEnter: () => {
+			speakerRing.style.top = "900px";
+			speakerRing.classList.add("speaker3");
+		},
+		onLeaveBack: () => {
+			speakerRing.style.top = "500px";
+			speakerRing.classList.remove("speaker3");
+		},
+	},
+});
 // gsap.to(".speaker-ring", {
 // 	scrollTrigger: {
 // 		trigger: ".interview",

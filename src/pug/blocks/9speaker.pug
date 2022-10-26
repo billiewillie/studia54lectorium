@@ -30,9 +30,13 @@ include ../mixins/title
         .speaker__photo
           picture
             img(src="./img/olga2.jpg", alt="speaker", width="100%", height="100%")
+          .speaker-ring
+            svg.speaker-ring__inner(width="809" height="809" viewBox="0 0 809 809" fill="none" xmlns="http://www.w3.org/2000/svg")
+              circle(cx="404.5" cy="404.5" r="339" stroke="#6868AC" stroke-opacity="0.31" stroke-width="131")
         .speaker__front-about
           h3.title.gold Ольга Иванова
-          p Ведущий дизайнер и руководитель Studia 54
+          p Ведущий дизайнер и руководитель 
+            a.gold(href="https://www.studia-54.com/", target="_blank") Studia 54
       ul.speaker__about
         each item in about
           li.speaker__item

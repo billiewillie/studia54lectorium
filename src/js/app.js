@@ -330,91 +330,91 @@ gsap.to(".speaker-ring", {
 		},
 	},
 });
-gsap.to(".speaker-ring", {
-	scrollTrigger: {
-		trigger: ".speaker__photo",
-		start: "100% +120%",
-		onEnter: () => {
-			speakerRing.style.top = "500px";
-			ringInner.style.height = `233px`;
-			ringInner.style.width = `233px`;
-			speakerRing.classList.add("speaker2");
-		},
-		onLeaveBack: () => {
-			speakerRing.style.top = "0";
-			ringInner.style.height = `100%`;
-			ringInner.style.width = `100%`;
-			speakerRing.classList.remove("speaker2");
-		},
-	},
-});
-gsap.to(".speaker-ring", {
-	scrollTrigger: {
-		trigger: ".speaker__photo",
-		start: "100% +50%",
-		onEnter: () => {
-			speakerRing.style.top = "900px";
-			speakerRing.classList.add("speaker3");
-		},
-		onLeaveBack: () => {
-			speakerRing.style.top = "500px";
-			speakerRing.classList.remove("speaker3");
-		},
-	},
-});
-gsap.to(".speaker-ring", {
-	scrollTrigger: {
-		trigger: ".interview",
-		start: "0% +100%",
-		onEnter: () => {
-			speakerRing.style.top = "1450px";
-			speakerRing.classList.add("interview");
-		},
-		onLeaveBack: () => {
-			speakerRing.style.top = "900px";
-			speakerRing.classList.remove("interview");
-		},
-	},
-});
-gsap.to(".speaker-ring", {
-	scrollTrigger: {
-		trigger: ".interview",
-		start: "100% +140%",
-		onEnter: () => {
-			speakerRing.style.top = "1900px";
-			speakerRing.classList.add("interview2");
-		},
-		onLeaveBack: () => {
-			speakerRing.style.top = "1450px";
-			speakerRing.classList.remove("interview2");
-		},
-	},
-});
-gsap.to(".qa-ring", {
-	scrollTrigger: {
-		trigger: ".qa",
-		start: "0% +120%",
-		onEnter: () => {
-			qaRing.style.top = "0";
-			qaRing.classList.add("show");
-		},
-		onLeaveBack: () => {
-			qaRing.style.top = "0";
-			qaRing.classList.remove("show");
-		},
-	},
-});
-gsap.to(".qa-ring", {
-	scrollTrigger: {
-		trigger: ".qa",
-		start: "100% +150%",
-		onEnter: () => {
-			qaRing.style.top = "400px";
-			qaRing.classList.add("qa2");
-		},
-		onLeaveBack: () => {
-			qaRing.style.top = "0";
-			qaRing.classList.remove("qa2");
-		},
-	},
-});
+// gsap.to(".speaker-ring", {
+// 	scrollTrigger: {
+// 		trigger: ".speaker__photo",
+// 		start: "100% +120%",
+// 		onEnter: () => {
+// 			speakerRing.style.top = "500px";
+// 			ringInner.style.height = `233px`;
+// 			ringInner.style.width = `233px`;
+// 			speakerRing.classList.add("speaker2");
+// 		},
+// 		onLeaveBack: () => {
+// 			speakerRing.style.top = "0";
+// 			ringInner.style.height = `100%`;
+// 			ringInner.style.width = `100%`;
+// 			speakerRing.classList.remove("speaker2");
+// 		},
+// 	},
+// });
+// gsap.to(".speaker-ring", {
+// 	scrollTrigger: {
+// 		trigger: ".speaker__photo",
+// 		start: "100% +50%",
+// 		onEnter: () => {
+// 			speakerRing.style.top = "900px";
+// 			speakerRing.classList.add("speaker3");
+// 		},
+// 		onLeaveBack: () => {
+// 			speakerRing.style.top = "500px";
+// 			speakerRing.classList.remove("speaker3");
+// 		},
+// 	},
+// });
+// gsap.to(".speaker-ring", {
+// 	scrollTrigger: {
+// 		trigger: ".interview",
+// 		start: "0% +100%",
+// 		onEnter: () => {
+// 			speakerRing.style.top = "1450px";
+// 			speakerRing.classList.add("interview");
+// 		},
+// 		onLeaveBack: () => {
+// 			speakerRing.style.top = "900px";
+// 			speakerRing.classList.remove("interview");
+// 		},
+// 	},
+// });
+// gsap.to(".speaker-ring", {
+// 	scrollTrigger: {
+// 		trigger: ".interview",
+// 		start: "100% +140%",
+// 		onEnter: () => {
+// 			speakerRing.style.top = "1900px";
+// 			speakerRing.classList.add("interview2");
+// 		},
+// 		onLeaveBack: () => {
+// 			speakerRing.style.top = "1450px";
+// 			speakerRing.classList.remove("interview2");
+// 		},
+// 	},
+// });
+// gsap.to(".qa-ring", {
+// 	scrollTrigger: {
+// 		trigger: ".qa",
+// 		start: "0% +120%",
+// 		onEnter: () => {
+// 			qaRing.style.top = "0";
+// 			qaRing.classList.add("show");
+// 		},
+// 		onLeaveBack: () => {
+// 			qaRing.style.top = "0";
+// 			qaRing.classList.remove("show");
+// 		},
+// 	},
+// });
+// gsap.to(".qa-ring", {
+// 	scrollTrigger: {
+// 		trigger: ".qa",
+// 		start: "100% +150%",
+// 		onEnter: () => {
+// 			qaRing.style.top = "400px";
+// 			qaRing.classList.add("qa2");
+// 		},
+// 		onLeaveBack: () => {
+// 			qaRing.style.top = "0";
+// 			qaRing.classList.remove("qa2");
+// 		},
+// 	},
+// });

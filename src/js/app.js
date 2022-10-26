@@ -381,7 +381,7 @@ gsap.to(".speaker-ring", {
 gsap.to(".qa-ring", {
 	scrollTrigger: {
 		trigger: ".qa",
-		start: "0% +120%",
+		start: "0% +140%",
 		onEnter: () => {
 			qaRing.style.top = "0";
 			qaRing.classList.add("show");

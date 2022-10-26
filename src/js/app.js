@@ -214,7 +214,7 @@ ringInner.style.width = `${firstCircle.getBoundingClientRect().width}px`;
 gsap.to(".ring", {
 	scrollTrigger: {
 		trigger: ".first-screen",
-		start: "bottom 90%",
+		start: "bottom 70%",
 		onEnter: () => {
 			ring.style.top = firstCircleCoordTop;
 			ringInner.style.height = `${firstCircle.getBoundingClientRect().height}px`;
@@ -226,7 +226,7 @@ gsap.to(".ring", {
 gsap.to(".ring2", {
 	scrollTrigger: {
 		trigger: ".quote",
-		start: "top 50%",
+		start: "bottom 100%",
 		onEnter: () => {
 			ring2.style.top = quoteTop;
 			ringInner2.style.height = `216px`;
@@ -336,20 +336,20 @@ gsap.to(".speaker-ring", {
 		},
 	},
 });
-gsap.to(".speaker-ring", {
-	scrollTrigger: {
-		trigger: ".speaker__photo",
-		start: "100% +50%",
-		onEnter: () => {
-			speakerRing.style.top = "900px";
-			speakerRing.classList.add("speaker3");
-		},
-		onLeaveBack: () => {
-			speakerRing.style.top = "500px";
-			speakerRing.classList.remove("speaker3");
-		},
-	},
-});
+// gsap.to(".speaker-ring", {
+// 	scrollTrigger: {
+// 		trigger: ".speaker__photo",
+// 		start: "100% +50%",
+// 		onEnter: () => {
+// 			speakerRing.style.top = "900px";
+// 			speakerRing.classList.add("speaker3");
+// 		},
+// 		onLeaveBack: () => {
+// 			speakerRing.style.top = "500px";
+// 			speakerRing.classList.remove("speaker3");
+// 		},
+// 	},
+// });
 // gsap.to(".speaker-ring", {
 // 	scrollTrigger: {
 // 		trigger: ".interview",

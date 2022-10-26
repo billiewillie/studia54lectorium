@@ -267,7 +267,7 @@ gsap.to(".ring2", {
 gsap.to(".ring2", {
 	scrollTrigger: {
 		trigger: ".details",
-		start: "100% 100%",
+		start: "60% 100%",
 		onEnter: () => {
 			ring2.style.top = detailsBottom;
 			ringInner2.style.height = `213px`;

@@ -226,7 +226,7 @@ gsap.to(".ring", {
 gsap.to(".ring2", {
 	scrollTrigger: {
 		trigger: ".quote",
-		start: "bottom 100%",
+		start: "30$ 100%",
 		onEnter: () => {
 			ring2.style.top = quoteTop;
 			ringInner2.style.height = `216px`;

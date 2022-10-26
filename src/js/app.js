@@ -214,7 +214,7 @@ ringInner.style.width = `${firstCircle.getBoundingClientRect().width}px`;
 gsap.to(".ring", {
 	scrollTrigger: {
 		trigger: ".first-screen",
-		start: "50% 20%",
+		start: "30% 20%",
 		onEnter: () => {
 			ring.style.top = firstCircleCoordTop;
 			ringInner.style.height = `${firstCircle.getBoundingClientRect().height}px`;

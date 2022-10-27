@@ -385,7 +385,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	gsap.to(".qa-ring", {
 		scrollTrigger: {
 			trigger: ".qa",
-			start: "70% 70%",
+			start: "90% 90%",
 			onEnter: () => {
 				qaRing.style.top = "700px";
 				qaRing.classList.add("qa2");

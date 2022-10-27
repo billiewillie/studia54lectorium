@@ -200,12 +200,11 @@ popupClose.addEventListener("click", () => {
 
 const firstCircle = document.querySelector(".first__circle");
 const firstCircleCoordTop = `${document.querySelector(".first__circle").getBoundingClientRect().top}px`;
-const quoteTop = `${document.querySelector(".quote").getBoundingClientRect().top - 140}px`;
+const quoteTop = `${document.querySelector(".quote").getBoundingClientRect().top - 70}px`;
 const detailsTop = `${document.querySelector(".details").getBoundingClientRect().top - 150}px`;
 const detailsBottom = `${document.querySelector(".details").getBoundingClientRect().bottom - 400}px`;
-const expectationsTop = `${document.querySelector(".expectations").getBoundingClientRect().top + 100}px`;
+const expectationsTop = `${document.querySelector(".expectations").getBoundingClientRect().top + 120}px`;
 const groupTop = `${document.querySelector(".group").getBoundingClientRect().top - 120}px`;
-const galleryTop = `${document.querySelector(".gallery").getBoundingClientRect().top - 400}px`;
 
 ring.style.top = firstCircleCoordTop;
 ringInner.style.height = `${firstCircle.getBoundingClientRect().height}px`;
@@ -262,7 +261,7 @@ gsap.to(".ring2", {
 gsap.to(".ring2", {
 	scrollTrigger: {
 		trigger: ".details",
-		start: "60% 100%",
+		start: "80% 100%",
 		onEnter: () => {
 			ring2.style.top = detailsBottom;
 			ringInner2.style.height = `213px`;

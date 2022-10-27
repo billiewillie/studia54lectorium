@@ -23,35 +23,9 @@ const popupContent = popupSuccess.querySelector(".popup-content");
 const popupClose = popupSuccess.querySelector(".close");
 const form = document.querySelector("#wpcf7-f8-o1");
 const ring = document.querySelector(".ring");
-const ring2 = document.querySelector(".ring2");
 const ringInner = ring.querySelector(".ring__inner");
-// const ringInner2 = ring2.querySelector(".ring2__inner");
 const speakerRing = document.querySelector(".speaker-ring");
 const qaRing = document.querySelector(".qa-ring");
-
-// let tl1 = gsap.timeline({
-// 	scrollTrigger: {
-// 		trigger: ".shedule",
-// 		start: "top 80%",
-// 		end: "bottom top",
-// 		scrub: 4,
-// 		toggleActions: "restart complete complete reverse",
-// 	},
-// });
-
-// tl1.fromTo(".shedule .circle", { y: 0 }, { y: 250, ease: "Circ.easeOut", duration: 1500 });
-
-// let tl2 = gsap.timeline({
-// 	scrollTrigger: {
-// 		trigger: ".overflow",
-// 		start: "top 80%",
-// 		end: "bottom top",
-// 		scrub: 4,
-// 		toggleActions: "restart complete complete reverse",
-// 	},
-// });
-
-// tl2.fromTo(".overflow .circle", { y: 0 }, { y: 700, ease: "Circ.easeOut", duration: 1500 });
 
 new Swiper(".gallery__list", {
 	modules: [Navigation, Pagination],
@@ -292,11 +266,51 @@ window.addEventListener("scroll", () => {
 			document.querySelector(".ring").style.width = `447px`;
 			document.querySelector(".ring").style.height = `447px`;
 		}
+		if (window.matchMedia("(min-width:1024px)").matches) {
+			if (y >= 0 && y <= 100) {
+				document.querySelector(".ring").style.opacity = `0`;
+				document.querySelector(".ring").style.transform = `scale(0)`;
+			}
+			if (y > 100 && y <= 500) {
+				document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 454}px`;
+				document.querySelector(".ring").style.top = `195px`;
+				document.querySelector(".ring").style.width = `810px`;
+				document.querySelector(".ring").style.height = `810px`;
+				document.querySelector(".ring").style.opacity = `1`;
+				document.querySelector(".ring").style.transform = `scale(1)`;
+			}
+			if (y > 4700 && y <= 5700) {
+				document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left - 150}px`;
+				document.querySelector(".ring").style.top = `6000px`;
+			}
+			if (y > 5700 && y <= 6400) {
+				document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 300}px`;
+				document.querySelector(".ring").style.top = `6800px`;
+			}
+			if (y > 6400 && y <= 7200) {
+				document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 700}px`;
+				document.querySelector(".ring").style.top = `7500px`;
+			}
+			if (y > 7200 && y <= 7800) {
+				document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 400}px`;
+				document.querySelector(".ring").style.top = `8000px`;
+			}
+			if (y > 7800 && y <= 8600) {
+				document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 500}px`;
+				document.querySelector(".ring").style.top = `8400px`;
+			}
+			if (y > 8600 && y <= 9200) {
+				document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 700}px`;
+				document.querySelector(".ring").style.top = `9000px`;
+			}
+		}
 	}, 300);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-	document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 554}px`;
-	document.querySelector(".ring").style.opacity = `1`;
-	document.querySelector(".ring").style.transform = `scale(1)`;
+	if (window.matchMedia("(min-width:1360px)").matches) {
+		document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 554}px`;
+		document.querySelector(".ring").style.opacity = `1`;
+		document.querySelector(".ring").style.transform = `scale(1)`;
+	}
 });

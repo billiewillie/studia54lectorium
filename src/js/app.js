@@ -280,13 +280,13 @@ window.addEventListener("scroll", () => {
 			document.querySelector(".ring").style.width = `365px`;
 			document.querySelector(".ring").style.height = `365px`;
 		}
-		if (y > 7800 && y <= 8500) {
+		if (y > 7800 && y <= 8600) {
 			document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 800}px`;
 			document.querySelector(".ring").style.top = `8800px`;
 			document.querySelector(".ring").style.width = `494px`;
 			document.querySelector(".ring").style.height = `494px`;
 		}
-		if (y > 8500 && y <= 9000) {
+		if (y > 8600 && y <= 9200) {
 			document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 1000}px`;
 			document.querySelector(".ring").style.top = `9500px`;
 			document.querySelector(".ring").style.width = `447px`;

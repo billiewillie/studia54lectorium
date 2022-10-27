@@ -50,7 +50,7 @@
 			height: 100%;
 			transform: scale(0.4);
 			transform-origin: center;
-			transition: transform 0.6s ease-out, left 0.6s ease-out, top 0.6s ease-out;
+			transition: transform 1s ease-out, left 1s ease-out, top 1s ease-out;
 			z-index: -1;
 			opacity: 0;
 
@@ -75,7 +75,7 @@
 				transform: scale(1);
 				width: 219px;
 				height: 219px;
-				left: 70%;
+				left: 60%;
 			}
 
 			&.speaker3 {
@@ -84,7 +84,7 @@
 				& .speaker-ring__inner {
 					& circle {
 						stroke-width: 110;
-						transition: stroke-width 0.6s ease-out;
+						transition: stroke-width 1s ease-out;
 					}
 				}
 			}
@@ -95,7 +95,7 @@
 				& .speaker-ring__inner {
 					& circle {
 						stroke-width: 130;
-						transition: stroke-width 0.6s ease-out;
+						transition: stroke-width 1s ease-out;
 					}
 				}
 			}
@@ -106,7 +106,7 @@
 				& .speaker-ring__inner {
 					& circle {
 						stroke-width: 90;
-						transition: stroke-width 0.6s ease-out;
+						transition: stroke-width 1s ease-out;
 					}
 				}
 			}

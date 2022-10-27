@@ -204,12 +204,21 @@ document.addEventListener("DOMContentLoaded", () => {
 	setTimeout(() => {
 		firstCircleCoordTop = `${document.querySelector(".first__circle").getBoundingClientRect().top}px`;
 	});
-	console.log(document.querySelector(".first__circle").getBoundingClientRect().top);
 	const quoteTop = `${document.querySelector(".quote").getBoundingClientRect().top - 100}px`;
 	const detailsTop = `${document.querySelector(".details").getBoundingClientRect().top - 150}px`;
 	const detailsBottom = `${document.querySelector(".details").getBoundingClientRect().bottom - 400}px`;
-	const expectationsTop = `${document.querySelector(".expectations").getBoundingClientRect().top + 250}px`;
-	const groupTop = `${document.querySelector(".group").getBoundingClientRect().top}px`;
+	let expectationsTop;
+	if (window.matchMedia("(min-width: 768px)").matches) {
+		expectationsTop = `${document.querySelector(".expectations").getBoundingClientRect().top + 650}px`;
+	} else {
+		expectationsTop = `${document.querySelector(".expectations").getBoundingClientRect().top + 250}px`;
+	}
+	let groupTop;
+	if (window.matchMedia("(min-width: 768px)").matches) {
+		groupTop = `${document.querySelector(".group").getBoundingClientRect().top + 400}px`;
+	} else {
+		groupTop = `${document.querySelector(".group").getBoundingClientRect().top}px`;
+	}
 
 	// ring.style.top = firstCircleCoordTop;
 	ringInner.style.height = `${firstCircle.getBoundingClientRect().height}px`;
@@ -230,7 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	gsap.to(".ring2", {
 		scrollTrigger: {
 			trigger: ".details",
-			start: "30% 100%",
+			start: "50% 100%",
 			onEnter: () => {
 				ring2.style.top = detailsTop;
 				ringInner2.style.height = `163px`;
@@ -248,7 +257,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	gsap.to(".ring2", {
 		scrollTrigger: {
 			trigger: ".details",
-			start: "80% 100%",
+			start: "90% 100%",
 			onEnter: () => {
 				ring2.style.top = detailsBottom;
 				ringInner2.style.height = `213px`;
@@ -266,7 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	gsap.to(".ring2", {
 		scrollTrigger: {
 			trigger: ".expectations",
-			start: "100% 100%",
+			start: "100% 80%",
 			onEnter: () => {
 				ring2.style.top = expectationsTop;
 				ringInner2.style.height = `187px`;
@@ -284,7 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	gsap.to(".ring2", {
 		scrollTrigger: {
 			trigger: ".group",
-			start: "100% 100%",
+			start: "100% 80%",
 			onEnter: () => {
 				ring2.style.top = groupTop;
 				document.querySelector(".ring2").classList.add("group");
@@ -302,9 +311,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	gsap.to(".speaker-ring", {
 		scrollTrigger: {
 			trigger: ".speaker__photo",
-			start: "-30% 50%",
+			start: "-20% 50%",
 			onEnter: () => {
-				speakerRing.style.top = "500px";
+				speakerRing.style.top = "800px";
 				ringInner.style.height = `233px`;
 				ringInner.style.width = `233px`;
 				speakerRing.classList.add("speaker2");
@@ -336,7 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			trigger: ".interview",
 			start: "70% +100%",
 			onEnter: () => {
-				speakerRing.style.top = "1450px";
+				speakerRing.style.top = "1850px";
 				speakerRing.classList.add("interview");
 			},
 			onLeaveBack: () => {
@@ -362,7 +371,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	gsap.to(".qa-ring", {
 		scrollTrigger: {
 			trigger: ".qa",
-			start: "0% 50%",
+			start: "30% 100%",
 			onEnter: () => {
 				qaRing.style.top = "0";
 				qaRing.classList.add("show");
@@ -376,9 +385,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	gsap.to(".qa-ring", {
 		scrollTrigger: {
 			trigger: ".qa",
-			start: "100% +80%",
+			start: "70% 70%",
 			onEnter: () => {
-				qaRing.style.top = "400px";
+				qaRing.style.top = "700px";
 				qaRing.classList.add("qa2");
 			},
 			onLeaveBack: () => {

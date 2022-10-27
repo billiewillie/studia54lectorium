@@ -1,16 +1,21 @@
 .ring {
 	position: absolute;
-	left: 0;
-	top: 5%;
+	// left: 0;
+	// top: 5%;
 	width: 100%;
 	transform: scale(0);
 	opacity: 0;
 	transform-origin: center;
-	transition: transform 1s ease-out, opacity 1s ease-out 1s, top 1s ease-out;
+	transition: transform 1s ease-out, opacity 1s ease-out 1s, top 1s ease-out, left 1s ease-out, width 1s ease-out, height 1s ease-out;
 	z-index: -1;
 
-	@media (min-width: $md) {
-		display: none;
+	@media (min-width: $lg) {
+		width: 810px;
+		height: 810px;
+		opacity: 0;
+		transform: scale(0);
+		top: -95px;
+		// left: 1189px;
 	}
 
 	&__inner {
@@ -44,6 +49,14 @@
 		left: 20%;
 		transform: scale(1);
 		opacity: 0;
+	}
+
+	@media (min-width: 1024px) {
+		width: 810px;
+		height: 810px;
+		opacity: 1;
+		transform: scale(1);
+		top: 135px;
 	}
 
 	&__inner {

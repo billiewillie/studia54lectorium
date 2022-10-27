@@ -25,33 +25,33 @@ const form = document.querySelector("#wpcf7-f8-o1");
 const ring = document.querySelector(".ring");
 const ring2 = document.querySelector(".ring2");
 const ringInner = ring.querySelector(".ring__inner");
-const ringInner2 = ring2.querySelector(".ring2__inner");
+// const ringInner2 = ring2.querySelector(".ring2__inner");
 const speakerRing = document.querySelector(".speaker-ring");
 const qaRing = document.querySelector(".qa-ring");
 
-let tl1 = gsap.timeline({
-	scrollTrigger: {
-		trigger: ".shedule",
-		start: "top 80%",
-		end: "bottom top",
-		scrub: 4,
-		toggleActions: "restart complete complete reverse",
-	},
-});
+// let tl1 = gsap.timeline({
+// 	scrollTrigger: {
+// 		trigger: ".shedule",
+// 		start: "top 80%",
+// 		end: "bottom top",
+// 		scrub: 4,
+// 		toggleActions: "restart complete complete reverse",
+// 	},
+// });
 
-tl1.fromTo(".shedule .circle", { y: 0 }, { y: 250, ease: "Circ.easeOut", duration: 1500 });
+// tl1.fromTo(".shedule .circle", { y: 0 }, { y: 250, ease: "Circ.easeOut", duration: 1500 });
 
-let tl2 = gsap.timeline({
-	scrollTrigger: {
-		trigger: ".overflow",
-		start: "top 80%",
-		end: "bottom top",
-		scrub: 4,
-		toggleActions: "restart complete complete reverse",
-	},
-});
+// let tl2 = gsap.timeline({
+// 	scrollTrigger: {
+// 		trigger: ".overflow",
+// 		start: "top 80%",
+// 		end: "bottom top",
+// 		scrub: 4,
+// 		toggleActions: "restart complete complete reverse",
+// 	},
+// });
 
-tl2.fromTo(".overflow .circle", { y: 0 }, { y: 700, ease: "Circ.easeOut", duration: 1500 });
+// tl2.fromTo(".overflow .circle", { y: 0 }, { y: 700, ease: "Circ.easeOut", duration: 1500 });
 
 new Swiper(".gallery__list", {
 	modules: [Navigation, Pagination],
@@ -198,202 +198,105 @@ popupClose.addEventListener("click", () => {
 	}, 300);
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-	const firstCircle = document.querySelector(".first__circle");
-	let firstCircleCoordTop;
+window.addEventListener("scroll", () => {
 	setTimeout(() => {
-		firstCircleCoordTop = `${document.querySelector(".first__circle").getBoundingClientRect().top}px`;
-	});
-	const quoteTop = `${document.querySelector(".quote").getBoundingClientRect().top - 100}px`;
-	const detailsTop = `${document.querySelector(".details").getBoundingClientRect().top - 150}px`;
-	const detailsBottom = `${document.querySelector(".details").getBoundingClientRect().bottom - 400}px`;
-	let expectationsTop;
-	if (window.matchMedia("(min-width: 768px)").matches) {
-		expectationsTop = `${document.querySelector(".expectations").getBoundingClientRect().top + 650}px`;
-	} else {
-		expectationsTop = `${document.querySelector(".expectations").getBoundingClientRect().top + 250}px`;
-	}
-	let groupTop;
-	if (window.matchMedia("(min-width: 768px)").matches) {
-		groupTop = `${document.querySelector(".group").getBoundingClientRect().top + 400}px`;
-	} else {
-		groupTop = `${document.querySelector(".group").getBoundingClientRect().top}px`;
-	}
+		const y = window.scrollY;
+		console.log(y);
+		if (y >= 0 && y <= 100) {
+			document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 554}px`;
+			document.querySelector(".ring").style.top = `-95px`;
+			document.querySelector(".ring").style.width = `810px`;
+			document.querySelector(".ring").style.height = `810px`;
+		}
+		if (y > 100 && y <= 500) {
+			document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 654}px`;
+			document.querySelector(".ring").style.top = `195px`;
+			document.querySelector(".ring").style.width = `810px`;
+			document.querySelector(".ring").style.height = `810px`;
+		}
+		if (y > 500 && y <= 900) {
+			document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left}px`;
+			document.querySelector(".ring").style.top = `695px`;
+			document.querySelector(".ring").style.width = `521px`;
+			document.querySelector(".ring").style.height = `521px`;
+		}
+		if (y > 900 && y <= 1500) {
+			document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left - 100}px`;
+			document.querySelector(".ring").style.top = `1195px`;
+			document.querySelector(".ring").style.width = `325px`;
+			document.querySelector(".ring").style.height = `325px`;
+		}
+		if (y > 1500 && y <= 1800) {
+			document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 300}px`;
+			document.querySelector(".ring").style.top = `1495px`;
+			document.querySelector(".ring").style.width = `573px`;
+			document.querySelector(".ring").style.height = `573px`;
+		}
+		if (y > 1800 && y <= 2200) {
+			document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 900}px`;
+			document.querySelector(".ring").style.top = `1895px`;
+			document.querySelector(".ring").style.width = `533px`;
+			document.querySelector(".ring").style.height = `533px`;
+		}
+		if (y > 2200 && y <= 2600) {
+			document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 500}px`;
+			document.querySelector(".ring").style.top = `2795px`;
+			document.querySelector(".ring").style.width = `391px`;
+			document.querySelector(".ring").style.height = `391px`;
+		}
+		if (y > 2600 && y <= 4000) {
+			document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 400}px`;
+			document.querySelector(".ring").style.top = `3895px`;
+			document.querySelector(".ring").style.width = `569px`;
+			document.querySelector(".ring").style.height = `569px`;
+		}
+		if (y > 4200 && y <= 4700) {
+			document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left}px`;
+			document.querySelector(".ring").style.top = `5180px`;
+			document.querySelector(".ring").style.width = `620px`;
+			document.querySelector(".ring").style.height = `620px`;
+		}
+		if (y > 4700 && y <= 5700) {
+			document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left - 150}px`;
+			document.querySelector(".ring").style.top = `6300px`;
+			document.querySelector(".ring").style.width = `620px`;
+			document.querySelector(".ring").style.height = `620px`;
+		}
+		if (y > 5700 && y <= 6400) {
+			document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 300}px`;
+			document.querySelector(".ring").style.top = `7200px`;
+			document.querySelector(".ring").style.width = `544px`;
+			document.querySelector(".ring").style.height = `544px`;
+		}
+		if (y > 6400 && y <= 7200) {
+			document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 700}px`;
+			document.querySelector(".ring").style.top = `7800px`;
+			document.querySelector(".ring").style.width = `442px`;
+			document.querySelector(".ring").style.height = `442px`;
+		}
+		if (y > 7200 && y <= 7800) {
+			document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 400}px`;
+			document.querySelector(".ring").style.top = `8300px`;
+			document.querySelector(".ring").style.width = `365px`;
+			document.querySelector(".ring").style.height = `365px`;
+		}
+		if (y > 7800 && y <= 8500) {
+			document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 800}px`;
+			document.querySelector(".ring").style.top = `8800px`;
+			document.querySelector(".ring").style.width = `494px`;
+			document.querySelector(".ring").style.height = `494px`;
+		}
+		if (y > 8500 && y <= 9000) {
+			document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 1000}px`;
+			document.querySelector(".ring").style.top = `9500px`;
+			document.querySelector(".ring").style.width = `447px`;
+			document.querySelector(".ring").style.height = `447px`;
+		}
+	}, 300);
+});
 
-	// ring.style.top = firstCircleCoordTop;
-	ringInner.style.height = `${firstCircle.getBoundingClientRect().height}px`;
-	ringInner.style.width = `${firstCircle.getBoundingClientRect().width}px`;
-
-	gsap.to(".ring", {
-		scrollTrigger: {
-			trigger: ".first-screen",
-			start: "100% 100%",
-			onEnter: () => {
-				ring.style.top = firstCircleCoordTop;
-				ringInner.style.height = `${firstCircle.getBoundingClientRect().height}px`;
-				ringInner.style.width = `${firstCircle.getBoundingClientRect().width}px`;
-				document.querySelector(".ring").classList.add("show");
-			},
-		},
-	});
-	gsap.to(".ring2", {
-		scrollTrigger: {
-			trigger: ".details",
-			start: "50% 100%",
-			onEnter: () => {
-				ring2.style.top = detailsTop;
-				ringInner2.style.height = `163px`;
-				ringInner2.style.width = `163px`;
-				document.querySelector(".ring2").classList.add("details");
-			},
-			onLeaveBack: () => {
-				ring2.style.top = quoteTop;
-				ringInner2.style.height = `216px`;
-				ringInner2.style.width = `216px`;
-				document.querySelector(".ring2").classList.remove("details");
-			},
-		},
-	});
-	gsap.to(".ring2", {
-		scrollTrigger: {
-			trigger: ".details",
-			start: "90% 100%",
-			onEnter: () => {
-				ring2.style.top = detailsBottom;
-				ringInner2.style.height = `213px`;
-				ringInner2.style.width = `213px`;
-				document.querySelector(".ring2").classList.add("detailsBottom");
-			},
-			onLeaveBack: () => {
-				ring2.style.top = detailsTop;
-				ringInner2.style.height = `163px`;
-				ringInner2.style.width = `163px`;
-				document.querySelector(".ring2").classList.remove("detailsBottom");
-			},
-		},
-	});
-	gsap.to(".ring2", {
-		scrollTrigger: {
-			trigger: ".expectations",
-			start: "100% 80%",
-			onEnter: () => {
-				ring2.style.top = expectationsTop;
-				ringInner2.style.height = `187px`;
-				ringInner2.style.width = `187px`;
-				document.querySelector(".ring2").classList.add("expectations");
-			},
-			onLeaveBack: () => {
-				ring2.style.top = detailsBottom;
-				ringInner2.style.height = `213px`;
-				ringInner2.style.width = `213px`;
-				document.querySelector(".ring2").classList.remove("expectations");
-			},
-		},
-	});
-	gsap.to(".ring2", {
-		scrollTrigger: {
-			trigger: ".group",
-			start: "100% 80%",
-			onEnter: () => {
-				ring2.style.top = groupTop;
-				document.querySelector(".ring2").classList.add("group");
-				ringInner2.style.height = `233px`;
-				ringInner2.style.width = `233px`;
-			},
-			onLeaveBack: () => {
-				ring2.style.top = expectationsTop;
-				ringInner2.style.height = `233px`;
-				ringInner2.style.width = `233px`;
-				document.querySelector(".ring2").classList.remove("group");
-			},
-		},
-	});
-	gsap.to(".speaker-ring", {
-		scrollTrigger: {
-			trigger: ".speaker__photo",
-			start: "-20% 50%",
-			onEnter: () => {
-				speakerRing.style.top = "800px";
-				ringInner.style.height = `233px`;
-				ringInner.style.width = `233px`;
-				speakerRing.classList.add("speaker2");
-			},
-			onLeaveBack: () => {
-				speakerRing.style.top = "0";
-				ringInner.style.height = `100%`;
-				ringInner.style.width = `100%`;
-				speakerRing.classList.remove("speaker2");
-			},
-		},
-	});
-	gsap.to(".speaker-ring", {
-		scrollTrigger: {
-			trigger: ".speaker__photo",
-			start: "100% -50%",
-			onEnter: () => {
-				speakerRing.style.top = "900px";
-				speakerRing.classList.add("speaker3");
-			},
-			onLeaveBack: () => {
-				speakerRing.style.top = "500px";
-				speakerRing.classList.remove("speaker3");
-			},
-		},
-	});
-	gsap.to(".speaker-ring", {
-		scrollTrigger: {
-			trigger: ".interview",
-			start: "70% +100%",
-			onEnter: () => {
-				speakerRing.style.top = "1850px";
-				speakerRing.classList.add("interview");
-			},
-			onLeaveBack: () => {
-				speakerRing.style.top = "900px";
-				speakerRing.classList.remove("interview");
-			},
-		},
-	});
-	gsap.to(".speaker-ring", {
-		scrollTrigger: {
-			trigger: ".interview",
-			start: "100% +140%",
-			onEnter: () => {
-				speakerRing.style.top = "1900px";
-				speakerRing.classList.add("interview2");
-			},
-			onLeaveBack: () => {
-				speakerRing.style.top = "1450px";
-				speakerRing.classList.remove("interview2");
-			},
-		},
-	});
-	gsap.to(".qa-ring", {
-		scrollTrigger: {
-			trigger: ".qa",
-			start: "-30% 100%",
-			onEnter: () => {
-				qaRing.style.top = "0";
-				qaRing.classList.add("show");
-			},
-			onLeaveBack: () => {
-				qaRing.style.top = "0";
-				qaRing.classList.remove("show");
-			},
-		},
-	});
-	gsap.to(".qa-ring", {
-		scrollTrigger: {
-			trigger: ".qa",
-			start: "100% 100%",
-			onEnter: () => {
-				qaRing.style.top = "700px";
-				qaRing.classList.add("qa2");
-			},
-			onLeaveBack: () => {
-				qaRing.style.top = "0";
-				qaRing.classList.remove("qa2");
-			},
-		},
-	});
+document.addEventListener("DOMContentLoaded", () => {
+	document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 554}px`;
+	document.querySelector(".ring").style.opacity = `1`;
+	document.querySelector(".ring").style.transform = `scale(1)`;
 });

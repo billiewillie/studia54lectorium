@@ -9,6 +9,10 @@
 	transition: transform 0.6s ease-out, opacity 0.4s ease-out 0.4s, top 0.6s ease-out;
 	z-index: -1;
 
+	@media (min-width: $md) {
+		display: none;
+	}
+
 	&__inner {
 		position: absolute;
 		top: 50%;
@@ -26,8 +30,8 @@
 
 .ring2 {
 	position: absolute;
-	left: 0;
-	top: 0;
+	left: 20%;
+	top: 5%;
 	width: 216px;
 	height: 216px;
 	transform: scale(0);
@@ -38,7 +42,7 @@
 
 	&__inner {
 		position: absolute;
-		top: 50%;
+		top: 0%;
 		left: 50%;
 		width: 100%;
 		height: 100%;
@@ -50,12 +54,6 @@
 		transition: top 0.6s ease-out, left 0.6s ease-out;
 		transform: scale(1);
 		opacity: 1;
-
-		// .ring__inner {
-		// 	left: 100%;
-		// 	stroke-width: 94;
-		// 	transition: left 0.6s ease-out;
-		// }
 	}
 
 	&.details {
@@ -111,5 +109,27 @@
 				transition: stroke-width 0.6s ease-out;
 			}
 		}
+	}
+}
+
+@keyframes ring2animate {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	50% {
+		transform: scale(0);
+		opacity: 0.5;
+	}
+
+	70% {
+		transform: scale(0.5);
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1;
 	}
 }

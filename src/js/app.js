@@ -221,6 +221,12 @@ gsap.to(".ring", {
 			ringInner.style.width = `${firstCircle.getBoundingClientRect().width}px`;
 			document.querySelector(".ring").classList.add("show");
 		},
+		onLeave: () => {
+			ring.style.top = firstCircleCoordTop;
+			ringInner.style.height = `${firstCircle.getBoundingClientRect().height}px`;
+			ringInner.style.width = `${firstCircle.getBoundingClientRect().width}px`;
+			document.querySelector(".ring").classList.add("show");
+		},
 	},
 });
 gsap.to(".ring2", {

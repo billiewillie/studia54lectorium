@@ -221,12 +221,6 @@ gsap.to(".ring", {
 			ringInner.style.width = `${firstCircle.getBoundingClientRect().width}px`;
 			document.querySelector(".ring").classList.add("show");
 		},
-		onLeave: () => {
-			ring.style.top = firstCircleCoordTop;
-			ringInner.style.height = `${firstCircle.getBoundingClientRect().height}px`;
-			ringInner.style.width = `${firstCircle.getBoundingClientRect().width}px`;
-			document.querySelector(".ring").classList.add("show");
-		},
 	},
 });
 gsap.to(".ring2", {
@@ -238,17 +232,12 @@ gsap.to(".ring2", {
 			ringInner2.style.height = `216px`;
 			ringInner2.style.width = `216px`;
 			document.querySelector(".ring2").classList.add("quote");
-			document.querySelector(".ring").classList.remove("show");
 		},
 		onLeaveBack: () => {
 			ring2.style.top = firstCircleCoordTop;
 			ringInner2.style.height = `0px`;
 			ringInner2.style.width = `0px`;
 			document.querySelector(".ring2").classList.remove("quote");
-			document.querySelector(".ring").classList.add("show");
-			ring.style.top = firstCircleCoordTop;
-			ringInner.style.height = `${firstCircle.getBoundingClientRect().height}px`;
-			ringInner.style.width = `${firstCircle.getBoundingClientRect().width}px`;
 		},
 	},
 });

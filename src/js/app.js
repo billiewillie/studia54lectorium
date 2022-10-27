@@ -200,11 +200,11 @@ popupClose.addEventListener("click", () => {
 
 const firstCircle = document.querySelector(".first__circle");
 const firstCircleCoordTop = `${document.querySelector(".first__circle").getBoundingClientRect().top}px`;
-const quoteTop = `${document.querySelector(".quote").getBoundingClientRect().top - 70}px`;
+const quoteTop = `${document.querySelector(".quote").getBoundingClientRect().top - 50}px`;
 const detailsTop = `${document.querySelector(".details").getBoundingClientRect().top - 150}px`;
 const detailsBottom = `${document.querySelector(".details").getBoundingClientRect().bottom - 400}px`;
-const expectationsTop = `${document.querySelector(".expectations").getBoundingClientRect().top + 120}px`;
-const groupTop = `${document.querySelector(".group").getBoundingClientRect().top - 120}px`;
+const expectationsTop = `${document.querySelector(".expectations").getBoundingClientRect().top + 160}px`;
+const groupTop = `${document.querySelector(".group").getBoundingClientRect().top}px`;
 
 ring.style.top = firstCircleCoordTop;
 ringInner.style.height = `${firstCircle.getBoundingClientRect().height}px`;

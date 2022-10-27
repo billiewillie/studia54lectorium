@@ -2,7 +2,7 @@
 	display: flex;
 	align-items: stretch;
 	position: relative;
-	overflow: hidden;
+	overflow: visible;
 
 	@media (min-width: 1024px) {
 		overflow: visible;

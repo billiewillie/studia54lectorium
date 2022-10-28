@@ -177,9 +177,15 @@ window.addEventListener("scroll", () => {
 		const y = window.scrollY;
 		console.log(y);
 		if (window.matchMedia("(min-width:320px)").matches && window.matchMedia("(max-width:767px)").matches) {
+			if (y >= 0 && y <= 100) {
+				document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 54}px`;
+				document.querySelector(".ring").style.top = `500px`;
+				document.querySelector(".ring").style.width = `200px`;
+				document.querySelector(".ring").style.height = `200px`;
+			}
 			if (y > 100 && y <= 700) {
 				document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 254}px`;
-				document.querySelector(".ring").style.top = `700px`;
+				document.querySelector(".ring").style.top = `800px`;
 				document.querySelector(".ring").style.width = `200px`;
 				document.querySelector(".ring").style.height = `200px`;
 				document.querySelector(".ring").style.opacity = `1`;
@@ -414,6 +420,11 @@ window.addEventListener("scroll", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+	if (window.matchMedia("(min-width:320px)").matches) {
+		document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 54}px`;
+		document.querySelector(".ring").style.opacity = `1`;
+		document.querySelector(".ring").style.transform = `scale(1)`;
+	}
 	if (window.matchMedia("(min-width:1360px)").matches) {
 		document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 554}px`;
 		document.querySelector(".ring").style.opacity = `1`;

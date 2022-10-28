@@ -179,7 +179,7 @@ window.addEventListener("scroll", () => {
 		if (window.matchMedia("(min-width:320px)").matches && window.matchMedia("(max-width:767px)").matches) {
 			if (y > 100 && y <= 700) {
 				document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 254}px`;
-				document.querySelector(".ring").style.top = `800px`;
+				document.querySelector(".ring").style.top = `700px`;
 				document.querySelector(".ring").style.width = `200px`;
 				document.querySelector(".ring").style.height = `200px`;
 				document.querySelector(".ring").style.opacity = `1`;
@@ -187,37 +187,37 @@ window.addEventListener("scroll", () => {
 			}
 			if (y > 700 && y <= 1000) {
 				document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left}px`;
-				document.querySelector(".ring").style.top = `1300px`;
+				document.querySelector(".ring").style.top = `1200px`;
 				document.querySelector(".ring").style.width = `150px`;
 				document.querySelector(".ring").style.height = `150px`;
 			}
 			if (y > 1000 && y <= 1600) {
 				document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 100}px`;
-				document.querySelector(".ring").style.top = `1800px`;
+				document.querySelector(".ring").style.top = `1700px`;
 				document.querySelector(".ring").style.width = `250px`;
 				document.querySelector(".ring").style.height = `250px`;
 			}
 			if (y > 1600 && y <= 2100) {
 				document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 200}px`;
-				document.querySelector(".ring").style.top = `2500px`;
+				document.querySelector(".ring").style.top = `2300px`;
 				document.querySelector(".ring").style.width = `100px`;
 				document.querySelector(".ring").style.height = `100px`;
 			}
 			if (y > 2100 && y <= 2400) {
 				document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left - 100}px`;
-				document.querySelector(".ring").style.top = `3000px`;
+				document.querySelector(".ring").style.top = `2800px`;
 				document.querySelector(".ring").style.width = `300px`;
 				document.querySelector(".ring").style.height = `300px`;
 			}
 			if (y > 2400 && y <= 2600) {
 				document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 300}px`;
-				document.querySelector(".ring").style.top = `3500px`;
+				document.querySelector(".ring").style.top = `3000px`;
 				document.querySelector(".ring").style.width = `200px`;
 				document.querySelector(".ring").style.height = `200px`;
 			}
 			if (y > 2600 && y <= 3100) {
 				document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 100}px`;
-				document.querySelector(".ring").style.top = `3700px`;
+				document.querySelector(".ring").style.top = `3500px`;
 				document.querySelector(".ring").style.width = `250px`;
 				document.querySelector(".ring").style.height = `250px`;
 			}

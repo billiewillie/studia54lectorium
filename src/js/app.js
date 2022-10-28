@@ -326,7 +326,7 @@ window.addEventListener("scroll", () => {
 
 		if (window.matchMedia("(min-width:1440px)").matches) {
 			if (y >= 0 && y <= 100) {
-				document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 854}px`;
+				document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 554}px`;
 				document.querySelector(".ring").style.top = `-95px`;
 				document.querySelector(".ring").style.width = `810px`;
 				document.querySelector(".ring").style.height = `810px`;

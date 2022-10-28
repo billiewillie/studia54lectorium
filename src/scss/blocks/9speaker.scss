@@ -50,9 +50,20 @@
 			height: 100%;
 			transform: scale(0.4);
 			transform-origin: center;
-			transition: transform 1s ease-out, left 1s ease-out, top 1s ease-out;
+			transition: transform 1s ease-out, left 1s ease-out, top 1s ease-out, width 1s ease-out, height 1s ease-out;
 			z-index: -1;
 			opacity: 0;
+
+			@media (min-width: $lg) {
+				position: absolute;
+				left: -76px;
+				top: -28px;
+				width: 780px;
+				height: 780px;
+				transform: scale(0);
+				transform-origin: center;
+				transition: transform 1s ease-out, left 1s ease-out, top 1s ease-out, width 1s ease-out, height 1s ease-out;
+			}
 
 			&__inner {
 				position: absolute;

@@ -361,19 +361,22 @@ window.addEventListener("scroll", () => {
 				document.querySelector(".ring").style.height = `533px`;
 			}
 			if (y > 2200 && y <= 2600) {
-				document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 500}px`;
-				document.querySelector(".ring").style.top = `2795px`;
+				document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 100}px`;
+				document.querySelector(".ring").style.top = `3000px`;
 				document.querySelector(".ring").style.width = `391px`;
 				document.querySelector(".ring").style.height = `391px`;
 				document.querySelector(".speaker-ring").classList.remove("show");
+				document.querySelector(".speaker-ring").style.width = `780px`;
+				document.querySelector(".speaker-ring").style.height = `780px`;
+				document.querySelector(".speaker-ring").style.top = `-900px`;
 			}
-			if (y > 2600 && y <= 4800) {
-				document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 250}px`;
-				document.querySelector(".ring").style.top = `3895px`;
-				document.querySelector(".ring").style.width = `569px`;
-				document.querySelector(".ring").style.height = `569px`;
-				document.querySelector(".ring").style.opacity = `1`;
-			}
+			// if (y > 2600 && y <= 4800) {
+			// 	document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 250}px`;
+			// 	document.querySelector(".ring").style.top = `3895px`;
+			// 	document.querySelector(".ring").style.width = `569px`;
+			// 	document.querySelector(".ring").style.height = `569px`;
+			// 	document.querySelector(".ring").style.opacity = `1`;
+			// }
 			if (y > 4600 && y <= 5300) {
 				document.querySelector(".speaker-ring").classList.add("show");
 				document.querySelector(".speaker-ring").style.width = `780px`;
@@ -399,12 +402,6 @@ window.addEventListener("scroll", () => {
 				document.querySelector(".speaker-ring").style.width = `480px`;
 				document.querySelector(".speaker-ring").style.height = `480px`;
 			}
-			// if (y > 8600 && y <= 9200) {
-			// 	document.querySelector(".ring").style.left = `${document.querySelector(".first-screen .content").getBoundingClientRect().left + 1000}px`;
-			// 	document.querySelector(".ring").style.top = `9500px`;
-			// 	document.querySelector(".ring").style.width = `447px`;
-			// 	document.querySelector(".ring").style.height = `447px`;
-			// }
 		}
 	}, 300);
 });

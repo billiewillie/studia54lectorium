@@ -6,7 +6,7 @@
 	transform: scale(0);
 	opacity: 0;
 	transform-origin: center;
-	transition: transform 1s ease-out, opacity 1s ease-out 1s, top 1s ease-out, left 1s ease-out, width 1s ease-out, height 1s ease-out;
+	transition: transform 1.5s ease-out, opacity 1.5s ease-out 1.5s, top 1.5s ease-out, left 1.5s ease-out, width 1.5s ease-out, height 1.5s ease-out;
 	z-index: -1;
 
 	@media (min-width: $lg) {
@@ -15,7 +15,7 @@
 		opacity: 0;
 		transform: scale(0);
 		top: -95px;
-		// left: 1189px;
+		transition: transform 1s ease-out, opacity 1s ease-out 1s, top 1s ease-out, left 1s ease-out, width 1s ease-out, height 1s ease-out;
 	}
 
 	&__inner {
